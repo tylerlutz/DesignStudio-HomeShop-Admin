@@ -1,0 +1,297 @@
+﻿@{
+    ViewBag.Title = "Form Layouts";
+    ViewBag.Description = "form layouts";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+@using System
+@model BeyondThemes.BeyondAdmin.Models.LoginViewModel
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-blue">
+                        <span class="widget-caption">Basic Form</span>
+                    </div>
+                    <div class="widget-body">
+                        <div>
+                            @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Vertical)))
+                            {
+                                @Html.Bootstrap().FormGroup().TextBoxFor(m => m.Email);
+                                @Html.Bootstrap().FormGroup().PasswordFor(m => m.Password);
+                                @(Html.Bootstrap().FormGroup().CustomControls(Html.Bootstrap().CheckBoxFor(m => m.RememberMe), Html.Bootstrap().SubmitButton()));
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-lightred">
+                        <span class="widget-caption">Horizontal Form</span>
+                    </div>
+                    <div class="widget-body">
+                        @using (var f = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal)))
+                        {
+                            @Html.Bootstrap().FormGroup().TextBoxFor(m => m.Email).HelpText("Example block-level help text here.", HelpTextStyle.Block).LabelWidthLg(2).InputWidthLg(10)
+                            @Html.Bootstrap().FormGroup().PasswordFor(m => m.Password).LabelWidthSm(2).InputWidthLg(10)
+                            @Html.Bootstrap().FormGroup().CheckBoxFor(m => m.RememberMe).InputWidthSm(10).InputOffsetLg(2)
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    @Html.Bootstrap().Button().Text("Sign In")
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-left bordered-darkorange">
+                        <span class="widget-caption">Inline Form</span>
+                    </div>
+                    <div class="widget-body bordered-left bordered-warning">
+                        @using (Html.Bootstrap().Begin(new Form().Type(FormType.Inline)))
+                        {
+                            @Html.Bootstrap().TextBoxFor(m => m.Email).Placeholder()
+                            @Html.Bootstrap().PasswordFor(m => m.Password).Placeholder()
+                            @Html.Bootstrap().FormGroup().CheckBoxFor(m => m.RememberMe)
+                            <div class="form-group">
+                                @Html.Bootstrap().Button().Text("Sign In")
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-palegreen">
+                        <span class="widget-caption">Bordered Form</span>
+                    </div>
+                    <div class="widget-body">
+                        <div>
+                            @using (var f = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).HtmlAttributes(new { @class = "form-bordered" })))
+                            {
+                                @Html.Bootstrap().FormGroup().TextBoxFor(m => m.Email).LabelWidthLg(2).InputWidthLg(10)
+                                @Html.Bootstrap().FormGroup().PasswordFor(m => m.Password).LabelWidthSm(2).InputWidthLg(10)
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        @Html.Bootstrap().Button().Text("Sign In").Color(BootstrapColors.Palegreen)
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-pink">
+                        <span class="widget-caption">Form Without Labels</span>
+                    </div>
+                    <div class="widget-body">
+                        <div id="horizontal-form">
+                            @using (var f = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal)))
+                            {
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.Bootstrap().TextBoxFor(m => m.Email).Placeholder()
+                                        <div class="horizontal-space"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.Bootstrap().PasswordFor(m => m.Password).Placeholder()
+                                        <div class="horizontal-space"></div>
+                                    </div>
+                                </div>
+                                @Html.Bootstrap().TextAreaFor(m => m.Email).Value("Content").Rows(3)
+                                <div class="horizontal-space"></div>
+                                <div>
+                                    @Html.Bootstrap().Button().Text("Send")
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <h5 class="row-title before-magenta"><i class="fa fa-edit magenta"></i>Form Examples</h5>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="widget flat radius-bordered">
+                            <div class="widget-header bg-blue">
+                                <span class="widget-caption">Registration Form</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="registration-form">
+                                    <form role="form">
+                                        <div class="form-title">
+                                            User Information
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon icon-right">
+                                                <input type="text" class="form-control" id="userameInput" placeholder="Username">
+                                                <i class="glyphicon glyphicon-user circular"></i>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon icon-right">
+                                                <input type="text" class="form-control" id="emailInput" placeholder="Email Address">
+                                                <i class="fa fa-envelope-o circular"></i>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon icon-right">
+                                                <input type="text" class="form-control" id="passwordInput" placeholder="Password">
+                                                <i class="fa fa-lock circular"></i>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon icon-right">
+                                                <input type="text" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password">
+                                                <i class="fa fa-lock circular"></i>
+                                            </span>
+                                        </div>
+                                        <div class="form-title">
+                                            Personal Information
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" placeholder="Name">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" placeholder="Family">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" placeholder="Phone">
+                                                        <i class="glyphicon glyphicon-earphone"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" placeholder="Mobile">
+                                                        <i class="glyphicon glyphicon-phone"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="wide" />
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                                        <input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" placeholder="Birth Date">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" placeholder="Birth Place">
+                                                        <i class="fa fa-globe"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" class="colored-blue">
+                                                    <span class="text">Auto Sign In After Registration</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-blue">Register</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="widget flat radius-bordered">
+                            <div class="widget-header bg-danger">
+                                <span class="widget-caption">Contact Form</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="registration-form">
+                                    <form role="form">
+                                        <div class="form-title">
+                                            Contact Us
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail2">Email address</label>
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter Email">
+                                                        <i class="fa fa-envelope blue"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputName2">Name</label>
+                                                    <span class="input-icon icon-right">
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+                                                        <i class="glyphicon glyphicon-user palegreen"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail2">Message</label>
+                                                    <span class="input-icon icon-right">
+                                                        <textarea class="form-control" rows="10"></textarea>
+                                                        <i class="glyphicon glyphicon-briefcase darkorange"></i>
+                                                    </span>
+                                                    <p class="help-block">Your message will be in this text area.</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" class="colored-danger">
+                                                    <span class="text">Notify me through E-mail</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

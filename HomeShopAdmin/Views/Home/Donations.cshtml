@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BeyondThemes.BeyondAdmin.Models.Donation>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Donation_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Donation_Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.FirstName)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    { @Html.Partial("_Donations", item)}
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donation_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donation_Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Donation_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Donation_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Donation_ID })
+        </td>
+    </tr>
+}
+
+</table>

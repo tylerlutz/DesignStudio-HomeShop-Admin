@@ -1,0 +1,349 @@
+﻿@{
+    ViewBag.Title = "Tabs and Accordions";
+    ViewBag.Description = "tabs and accordions";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title"><i class="typcn typcn-folder themeprimary"></i>Simple Tabs</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("SimpleTab").Position(Direction.Top)))
+                {
+                    tabs.Tab("Home", BootstrapColors.Danger);
+                    tabs.Tab("Profile", BootstrapColors.Success);
+                    tabs.Tab("More", BootstrapColors.Info);
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+                }
+                <div class="horizontal-space"></div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+
+
+                <div class="horizontal-space"></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("LeftTab").Position(Direction.Left)))
+                {
+                    tabs.Tab("Home");
+                    tabs.Tab("Profile");
+                    tabs.Tab("More");
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+
+
+                }
+                <div class="horizontal-space"></div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("RightTab").Position(Direction.Right)))
+                {
+                    tabs.Tab("Home");
+                    tabs.Tab("Profile");
+                    tabs.Tab("More");
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+
+
+                }
+                <div class="horizontal-space"></div>
+            </div>
+        </div>
+
+        <h5 class="row-title before-palegreen"><i class="fa fa-align-justify palegreen"></i>Justified Tabs</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("JustifiedTab").Justified()))
+                {
+                    tabs.Tab("Home", BootstrapColors.Danger);
+                    tabs.Tab("Profile", BootstrapColors.Success);
+                    tabs.Tab("More", BootstrapColors.Info);
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+                }
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+
+                <div class="horizontal-space"></div>
+            </div>
+        </div>
+
+        <h5 class="row-title before-yellow"><i class="glyphicon glyphicon-unchecked yellow"></i>Radius Bordered Tabs</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("JustifiedTab").RadiusBordered()))
+                {
+                    tabs.Tab("Home", BootstrapColors.Danger);
+                    tabs.Tab("Profile", BootstrapColors.Success);
+                    tabs.Tab("More", BootstrapColors.Info);
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+                }
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("JustifiedTab").RadiusBordered().Justified()))
+                {
+                    tabs.Tab("Home", BootstrapColors.Default);
+                    tabs.Tab("Profile", BootstrapColors.Default);
+                    tabs.Tab("More", BootstrapColors.Default);
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+                }
+                <div class="horizontal-space"></div>
+            </div>
+        </div>
+
+        <h5 class="row-title before-darkorange"><i class="glyphicon glyphicon-magnet darkorange"></i>Tabs In Containers</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header">
+                        <span class="widget-caption">Tabs in Widget</span>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main ">
+                            @using (var tabs = Html.Bootstrap().Begin(new Tabs("TabsInWidget")))
+                            {
+                                tabs.Tab("Home");
+                                tabs.Tab("Profile");
+                                tabs.Tab("More");
+
+                                using (tabs.BeginPanel())
+                                {
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                                }
+                                using (tabs.BeginPanel())
+                                {
+                                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                                }
+                                using (tabs.BeginPanel())
+                                {
+                                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-darkorange">Tabs In Well</div>
+                    @using (var tabs = Html.Bootstrap().Begin(new Tabs("TabsinWell")))
+                    {
+                        tabs.Tab("Home");
+                        tabs.Tab("Profile");
+                        tabs.Tab("More");
+
+                        using (tabs.BeginPanel())
+                        {
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                        }
+                        using (tabs.BeginPanel())
+                        {
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                        }
+                        using (tabs.BeginPanel())
+                        {
+                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget flat radius-bordered">
+                    <div class="widget-header bg-themeprimary">
+                        <span class="widget-caption">Flat Tabs in Widget</span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-main ">
+                            @using (var tabs = Html.Bootstrap().Begin(new Tabs("FlatTab").Flat()))
+                            {
+                                tabs.Tab("Home");
+                                tabs.Tab("Profile");
+                                tabs.Tab("More");
+
+                                using (tabs.BeginPanel())
+                                {
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                                }
+                                using (tabs.BeginPanel())
+                                {
+                                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                                }
+                                using (tabs.BeginPanel())
+                                {
+                                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var tabs = Html.Bootstrap().Begin(new Tabs("FlatTab2").Flat()))
+                {
+                    tabs.Tab("Home");
+                    tabs.Tab("Profile");
+                    tabs.Tab("More");
+
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    }
+                    using (tabs.BeginPanel())
+                    {
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title before-pink"><i class="glyphicon glyphicon-resize-vertical pink"></i>Accordions</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-blue">
+                        <span class="widget-caption">Accordion in Widget</span>
+
+                        <div class="widget-buttons">
+                            <a href="#" data-toggle="maximize">
+                                <i class="fa fa-expand blue"></i>
+                            </a>
+                            <a href="#" data-toggle="collapse">
+                                <i class="fa fa-minus warning"></i>
+                            </a>
+                            <a href="#" data-toggle="dispose">
+                                <i class="fa fa-times danger"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="widget-body no-padding">
+                        <div class="widget-main ">
+                            @using (var a = Html.Bootstrap().Begin(new Accordion("Accordion1").ActivePanel(1)))
+                            {
+                                using (a.BeginPanel("Collapsible Group Item #1"))
+                                {
+                                    <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                                }
+                                using (a.BeginPanel("Collapsible Group Item #2"))
+                                {
+                                    <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                                }
+                                using (a.BeginPanel("Collapsible Group Item #2"))
+                                {
+                                    <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                @using (var a = Html.Bootstrap().Begin(new Accordion("Accordion2").ActivePanel(1)))
+                {
+                    using (a.BeginPanel("Collapsible Group Item #1"))
+                    {
+                        <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                    }
+                    using (a.BeginPanel("Collapsible Group Item #2"))
+                    {
+                        <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                    }
+                    using (a.BeginPanel("Collapsible Group Item #2"))
+                    {
+                        <span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

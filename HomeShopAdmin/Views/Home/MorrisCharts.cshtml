@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Morris Charts";
+    ViewBag.Description = "Morris Charts";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <div class="widget">
+            <div class="widget-header ">
+                <span class="widget-caption">Area Chart</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="area-chart" class="chart chart-lg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="horizontal-space"></div>
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="widget">
+            <div class="widget-header ">
+                <span class="widget-caption">Donut Chart</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="donut-chart" class="chart chart-lg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="widget">
+            <div class="widget-header ">
+                <span class="widget-caption">Line Chart</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="line-chart" class="chart chart-lg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="horizontal-space"></div>
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <div class="widget">
+            <div class="widget-header ">
+                <span class="widget-caption">Bar Chart</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="bar-chart" class="chart chart-lg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="horizontal-space"></div>
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <div class="widget">
+            <div class="widget-header ">
+                <span class="widget-caption">Line Chart</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="maximize">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="line-chart-2" class="chart chart-lg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageScripts{
+    <script src="~/assets/js/beyond.min.js"></script>
+
+<!--Page Related Scripts-->
+<script src="~/assets/js/charts/morris/raphael-2.0.2.min.js"></script>
+<script src="~/assets/js/charts/morris/morris.js"></script>
+<script src="~/assets/js/charts/morris/morris-init.js"></script>
+
+<script type="text/javascript">
+    $(window).bind("load", function () {
+
+        /*Sets Themed Colors Based on Themes*/
+        themeprimary = getThemeColorFromCss('themeprimary');
+        themesecondary = getThemeColorFromCss('themesecondary');
+        themethirdcolor = getThemeColorFromCss('themethirdcolor');
+        themefourthcolor = getThemeColorFromCss('themefourthcolor');
+        themefifthcolor = getThemeColorFromCss('themefifthcolor');
+
+        InitiateAreaChart.init();
+        InitiateBarChart.init();
+        InitiateDonutChart.init();
+        InitiateLineChart.init();
+        InitiateLineChart2.init();
+    });
+</script>
+
+}

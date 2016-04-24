@@ -1,0 +1,568 @@
+﻿@{
+    ViewBag.Title = "Form Inputs";
+    ViewBag.Description = "form inputs";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title before-pink"><i class="fa fa-expand pink"></i>Input Sizes</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-top bordered-palegreen">
+                        <span class="widget-caption">Default Inputs</span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="xsinput">Extra Small Input</label>
+                                    @Html.Bootstrap().TextBox("xsinput").Placeholder("Extra Small Input").Size(InputSize.XSmall)
+                                </div>
+                                <div class="form-group">
+                                    <label for="sminput">Small Input</label>
+                                    @Html.Bootstrap().TextBox("sminput").Placeholder("Small Input").Size(InputSize.Small)
+                                </div>
+                                <div class="form-group">
+                                    <label for="definpu">Default Input</label>
+                                    @Html.Bootstrap().TextBox("definput").Placeholder("Default Input")
+                                </div>
+                                <div class="form-group">
+                                    <label for="lginput">Large Input</label>
+                                    @Html.Bootstrap().TextBox("lginput").Placeholder("Large Input").Size(InputSize.Large)
+                                </div>
+                                <div class="form-group">
+                                    <label for="xlginput">Extra Large Input</label>
+                                    @Html.Bootstrap().TextBox("xlginput").Placeholder("Extra Large Input").Size(InputSize.XLarge)
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-top bordered-darkorange">
+                        <span class="widget-caption">Disabled Inputs</span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="xsinput">Extra Small Input</label>
+                                    @Html.Bootstrap().TextBox("xsinput").Placeholder("Extra Small Input").Size(InputSize.XSmall).Disable()
+                                </div>
+                                <div class="form-group">
+                                    <label for="sminput">Small Input</label>
+                                    @Html.Bootstrap().TextBox("sminput").Placeholder("Small Input").Size(InputSize.Small).Disable()
+                                </div>
+                                <div class="form-group">
+                                    <label for="definpu">Default Input</label>
+                                    @Html.Bootstrap().TextBox("definput").Placeholder("Default Input").Disable()
+                                </div>
+                                <div class="form-group">
+                                    <label for="lginput">Large Input</label>
+                                    @Html.Bootstrap().TextBox("lginput").Placeholder("Large Input").Size(InputSize.Large).Disable()
+                                </div>
+                                <div class="form-group">
+                                    <label for="xlginput">Extra Large Input</label>
+                                    @Html.Bootstrap().TextBox("xlginput").Placeholder("Extra Large Input").Size(InputSize.XLarge).Disable()
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="row-title before-sky"><i class="glyphicon glyphicon-plane sky"></i>Inputs With Icons</h5>
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header">
+                        <span class="widget-caption">Inputs With Default Icons</span>
+                    </div>
+                    <div class="widget-body bordered-top bordered-pink">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("xsinput").Size(InputSize.XSmall).AppendIcon(FontAwesome.Times).AppendIconStyle("purple")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("sinput").Size(InputSize.Small).PrependIcon(GlyphIcons.Search).PrependIconStyle("blue")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("input").AppendIcon(FontAwesome.User).AppendIconStyle("darkorange")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("linput").Size(InputSize.Large).PrependIcon(FontAwesome.Envelope).PrependIconStyle("palegreen")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("xlinput").Size(InputSize.XLarge).AppendIcon(GlyphIcons.Lock).AppendIconStyle("maroon")
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header">
+                        <span class="widget-caption">Inputs With Circular Icons</span>
+                    </div>
+                    <div class="widget-body bordered-top bordered-sky">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("xscircularinput").Size(InputSize.XSmall).AppendIcon(FontAwesome.Times).AppendIconStyle("sky circular")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("scircularinput").Size(InputSize.Small).PrependIcon(GlyphIcons.Search).PrependIconStyle("danger circular")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("circularinput").AppendIcon(FontAwesome.User).AppendIconStyle("success circular")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("lcircularinput").Size(InputSize.Large).PrependIcon(FontAwesome.Envelope).PrependIconStyle("info circular")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("xlcircularinput").Size(InputSize.XLarge).AppendIcon(GlyphIcons.Headphones).AppendIconStyle("darkpink circular")
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header">
+                        <span class="widget-caption">Inputs With Inverted Icons</span>
+                    </div>
+                    <div class="widget-body bordered-top bordered-yellow">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("xsinvertedinput").Size(InputSize.XSmall).AppendIcon(FontAwesome.Times, true).AppendIconStyle("bg-purple")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("sinvertedinput").Size(InputSize.Small).PrependIcon(GlyphIcons.Search, true).PrependIconStyle("bg-blue")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("invertedinput").AppendIcon(FontAwesome.User, true).AppendIconStyle("bg-darkorange")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("lginvertedinput").Size(InputSize.Large).PrependIcon(FontAwesome.Envelope, true).PrependIconStyle("bg-palegreen")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("xlginvertedinput").Size(InputSize.XLarge).AppendIcon(GlyphIcons.Lock, true).AppendIconStyle("bg-pink")
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="row-title before-lightred"><i class="fa fa-check-square lightred"></i>Input Groups and Button Addons</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget radius-bordered">
+                    <div class="widget-header">
+                        <span class="widget-caption">Input Groups</span>
+                    </div>
+                    <div class="widget-body bordered-top bordered-success">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput").Prepend("@").Placeholder("Username")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput1").Append(".0")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput2").Append(".0").Prepend("$")
+                                </div>
+                                <h5>Sizing</h5>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput3").Prepend("@").Size(InputSize.XSmall)
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput4").Prepend("@").Size(InputSize.Small)
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput5").Prepend("@")
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput6").Prepend("@").Size(InputSize.Large)
+                                </div>
+                                <div class="form-group">
+                                    @Html.Bootstrap().TextBox("prependinput7").Prepend("@").Size(InputSize.XLarge)
+                                </div>
+                                <h5>With Icon</h5>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user darkorange"></i></span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon bg-blue bordered-blue"><i class="fa fa-envelope-o"></i></span>
+                                        <input type="text" class="form-control" placeholder="Email Address">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget radius-bordered">
+                    <div class="widget-header">
+                        <span class="widget-caption">Button Addons</span>
+                    </div>
+                    <div class="widget-body bordered-top bordered-info">
+                        <div class="collapse in">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        @Html.Bootstrap().TextBox("prependButton").Prepend(new BootstrapButton("button").Text("Go"))
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        @Html.Bootstrap().TextBox("prependButton").Append(new BootstrapButton("button").Text("Go").Shiny())
+                                    </div>
+                                </div>
+                                <div class="horizontal-space"></div>
+                                <hr class="wide" />
+                                <h4>Sizing</h4>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        @Html.Bootstrap().TextBox("prependButton").Prepend(new BootstrapButton("button").Text("Go")).Size(InputSize.XSmall)
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        @Html.Bootstrap().TextBox("prependButton").Append(new BootstrapButton("button").Text("Go")).Size(InputSize.Small)
+                                    </div>
+                                </div>
+                                <div class="horizontal-space"></div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        @Html.Bootstrap().TextBox("prependButton").Prepend(new BootstrapButton("button").Text("Go")).Size(InputSize.Large)
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        @Html.Bootstrap().TextBox("prependButton").Append(new BootstrapButton("button").Text("Go")).Size(InputSize.XLarge)
+                                    </div>
+                                </div>
+                                <hr class="wide" />
+                                <h5>Buttons with dropdowns</h5>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-6">
+                                        <div class="input-group">
+                                            <div class="input-group-btn">
+                                                <a class="btn btn-blue" href="javascript:void(0);">Actions</a>
+                                                <a class="btn btn-blue dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown-menu dropdown-blue">
+                                                    <li>
+                                                        <a href="javascript:void(0);">Action</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">Another action</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">Something else here</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">Separated link</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget radius-bordered">
+                    <div class="widget-header bordered-bottom bordered-red">
+                        <span class="widget-caption">Column Sizing</span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <input type="text" class="form-control" placeholder=".col-xs-2">
+                            </div>
+                            <div class="col-xs-3">
+                                <input type="text" class="form-control" placeholder=".col-xs-3">
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" placeholder=".col-xs-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="row-title before-red"><i class="fa fa-ban red"></i>Validation State</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-left bordered-blue">
+                        <span class="widget-caption">Validation States</span>
+                    </div>
+                    <div class="widget-body bordered-left bordered-blueberry">
+                        <form role="form">
+                            <div class="form-group has-success has-feedback">
+                                <label class="control-label" for="inputSuccess2">Input with success</label>
+                                <input type="text" class="form-control" id="inputSuccess2" value="Correct Value">
+                                <span class="glyphicon glyphicon-thumbs-up form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-warning has-feedback">
+                                <label class="control-label" for="inputWarning2">Input with warning</label>
+                                <input type="text" class="form-control" id="inputWarning2" value="Unconvincing Value">
+                                <span class="fa fa-warning form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-error has-feedback">
+                                <label class="control-label" for="inputError2">Input with error</label>
+                                <input type="text" class="form-control" id="inputError2" value="Wrong Value">
+                                <span class="glyphicon glyphicon-fire form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-info has-feedback">
+                                <label class="control-label" for="inputinfo2">Input With Info</label>
+                                <input type="text" class="form-control" id="inputinfo2" value="You've Got Mail!">
+                                <span class="fa fa-envelope form-control-feedback"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-left bordered-red">
+                        <span class="widget-caption">Input Group Validation States</span>
+                    </div>
+                    <div class="widget-body bordered-left bordered-gold">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class=" input-group has-success">
+                                    <span class="input-group-addon">@@</span>
+                                    <input type="text" class="form-control" placeholder="Username" value="Success">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group has-warning">
+                                    <span class="input-group-addon">@@</span>
+                                    <input type="text" class="form-control" placeholder="Username" value="Warning">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group has-error">
+                                    <span class="input-group-addon">@@</span>
+                                    <input type="text" class="form-control" placeholder="Username" value="Error">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group has-info">
+                                    <span class="input-group-addon">@@</span>
+                                    <input type="text" class="form-control" placeholder="Username" value="Info">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="row-title before-gold"><i class="fa fa-check-square-o gold"></i>Checkboxes, Radio Buttons and Switches</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget flat radius-bordered">
+                    <div class="widget-header bordered-bottom bordered-blue">
+                        <span class="widget-caption">CheckBoxes and Radio Buttons</span>
+                    </div>
+                    <div class="widget-body bordered-bottom bordered-darkorange">
+                        <h5>Checkboxes</h5>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("Basic").IsChecked(true)
+                            </div>
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("Inverted").IsChecked(true).HtmlAttributes(new { @class = "inverted" })
+                            </div>
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("Success").IsChecked(true).HtmlAttributes(new { @class = "colored-success" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("Danger").IsChecked(true).HtmlAttributes(new { @class = "colored-danger" })
+                            </div>
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("Blue").IsChecked(true).HtmlAttributes(new { @class = "colored-blue" })
+                            </div>
+                            <div class="col-lg-4 col-sm-4 col-xs-4">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("Warning").IsChecked(true).HtmlAttributes(new { @class = "colored-warning" })
+                            </div>
+                        </div>
+                        <hr class="wide" />
+                        <h5>Radio Buttons</h5>
+                        <div class="control-group">
+                            @Html.Bootstrap().RadioButton("form-field-radio", null).Text("Basic").IsChecked(true)
+                            @Html.Bootstrap().RadioButton("form-field-radio", null).Text("Inverted").HtmlAttributes(new { @class = "inverted" })
+                        </div>
+                        <hr class="wide" />
+                        <h5>Colored Radio Buttons</h5>
+                        <div class="control-group">
+                            @Html.Bootstrap().RadioButton("form-field-radio", null).Text(" Windows Phone").HtmlAttributes(new { @class = "colored-blue" }).IsChecked(true)
+                            @Html.Bootstrap().RadioButton("form-field-radio", null).Text(" IOS").HtmlAttributes(new { @class = "colored-danger" })
+                            @Html.Bootstrap().RadioButton("form-field-radio", null).Text(" Android").HtmlAttributes(new { @class = "colored-success" })
+                            @Html.Bootstrap().RadioButton("form-field-radio", null).Text(" Blackberry").HtmlAttributes(new { @class = "colored-blueberry" })
+                        </div>
+                        <hr class="wide" />
+                        <h5>Disabled Controls</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                @Html.Bootstrap().CheckBox("form-field-checkbox").Text("CheckBox").IsChecked(true).HtmlAttributes(new { disabled = "disabled" })
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                @Html.Bootstrap().RadioButton("form-field-radio", null).Text("Basic").IsChecked(true).HtmlAttributes(new { disabled = "disabled" })
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="widget flat radius-bordered">
+                    <div class="widget-header  bordered-bottom bordered-pink">
+                        <span class="widget-caption">On/Off Switches</span>
+                    </div>
+                    <div class="widget-body bordered-bottom bordered-sky">
+                        <div class="form-group">
+                            <h6>Default Switch Types</h6>
+                            <div class="horizontal-space"></div>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle" })
+                                </div>
+                            </div>
+                            <hr class="wide" />
+                            <h6>YES/NO Switches</h6>
+                            <div class="horizontal-space"></div>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider yesno" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon yesno" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle yesno" })
+                                </div>
+                            </div>
+                            <hr class="wide" />
+                            <h6>Colored Switches</h6>
+                            <div class="horizontal-space"></div>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider  colored-blue" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-blue" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-blue" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-darkorange" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-darkorange" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-darkorange" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-palegreen" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-palegreen" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-palegreen" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-purple" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-purple" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-purple" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-warning" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-warning" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-warning" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-success" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-success" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-success" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-danger" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-danger" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-danger" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider colored-magenta" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider slider-icon colored-magenta" })
+                                </div>
+                                <div class="col-xs-4">
+                                    @Html.Bootstrap().CheckBox("form-field-checkbox").Text("").HtmlAttributes(new { @class = "checkbox-slider toggle colored-magenta" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

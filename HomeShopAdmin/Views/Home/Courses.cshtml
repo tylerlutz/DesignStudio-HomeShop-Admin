@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BeyondThemes.BeyondAdmin.Models.Cours>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Max_Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Start_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_End_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.Id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Max_Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Start_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_End_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course_Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.Id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Course_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Course_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Course_ID })
+        </td>
+    </tr>
+}
+
+</table>

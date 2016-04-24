@@ -1,0 +1,822 @@
+﻿@{
+    ViewBag.Title = "Basic Elements";
+    ViewBag.Description = "basic elements";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title"><i class="fa fa-tags themeprimary"></i>Labels & Badges</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-purple">Default Labels & Badges</div>
+                    <div class="labels-container">
+                        <h6>Labels</h6>
+                        @Html.Bootstrap().InlineLabel("Default").Color(BootstrapColors.Default)
+                        @Html.Bootstrap().InlineLabel("Primary").Color(BootstrapColors.Primary)
+                        @Html.Bootstrap().InlineLabel("Info").Color(BootstrapColors.Info)
+                        @Html.Bootstrap().InlineLabel("Success").Color(BootstrapColors.Success)
+                        @Html.Bootstrap().InlineLabel("Danger").Color(BootstrapColors.Danger)
+                        @Html.Bootstrap().InlineLabel("Warning").Color(BootstrapColors.Warning)
+                        @Html.Bootstrap().InlineLabel("Sky").Color(BootstrapColors.Sky)
+                        @Html.Bootstrap().InlineLabel("Blueberry").Color(BootstrapColors.Blueberry)
+                        @Html.Bootstrap().InlineLabel("Yellow").Color(BootstrapColors.Yellow)
+                        @Html.Bootstrap().InlineLabel("Darkorange").Color(BootstrapColors.Darkorange)
+                        @Html.Bootstrap().InlineLabel("Magenta").Color(BootstrapColors.Magenta)
+                        @Html.Bootstrap().InlineLabel("Purple").Color(BootstrapColors.Purple)
+                        @Html.Bootstrap().InlineLabel("Maroon").Color(BootstrapColors.Maroon)
+                        @Html.Bootstrap().InlineLabel("Darkpink").Color(BootstrapColors.Darkpink)
+                        @Html.Bootstrap().InlineLabel("Pink").Color(BootstrapColors.Pink)
+                        @Html.Bootstrap().InlineLabel("Azure").Color(BootstrapColors.Azure)
+                        @Html.Bootstrap().InlineLabel("Orange").Color(BootstrapColors.Orange)
+                    </div>
+                    <hr class="wide" />
+                    <div class="Badges-container">
+                        <h6>Badges</h6>
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Default)
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Primary)
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Info)
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Success)
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Danger)
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Warning)
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Sky)
+                        @Html.Bootstrap().Badge("8").Color(BootstrapColors.Blueberry)
+                        @Html.Bootstrap().Badge("9").Color(BootstrapColors.Yellow)
+                        @Html.Bootstrap().Badge("0").Color(BootstrapColors.Darkorange)
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Magenta)
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Purple)
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Maroon)
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Darkpink)
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Pink)
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Azure)
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Orange)
+                    </div>
+                    <hr class="wide" />
+                    <div class="Badges-container">
+                        <h6>Square Badges</h6>
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Default).Square()
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Primary).Square()
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Info).Square()
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Success).Square()
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Danger).Square()
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Warning).Square()
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Sky).Square()
+                        @Html.Bootstrap().Badge("8").Color(BootstrapColors.Blueberry).Square()
+                        @Html.Bootstrap().Badge("9").Color(BootstrapColors.Yellow).Square()
+                        @Html.Bootstrap().Badge("0").Color(BootstrapColors.Darkorange).Square()
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Magenta).Square()
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Purple).Square()
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Maroon).Square()
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Darkpink).Square()
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Pink).Square()
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Azure).Square()
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Orange).Square()
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-sky">Graded Labels & Badges</div>
+                    <div class="labels-container">
+                        <h6>Labels</h6>
+                        @Html.Bootstrap().InlineLabel("Default").Color(BootstrapColors.Default).Graded()
+                        @Html.Bootstrap().InlineLabel("Primary").Color(BootstrapColors.Primary).Graded()
+                        @Html.Bootstrap().InlineLabel("Info").Color(BootstrapColors.Info).Graded()
+                        @Html.Bootstrap().InlineLabel("Success").Color(BootstrapColors.Success).Graded()
+                        @Html.Bootstrap().InlineLabel("Danger").Color(BootstrapColors.Danger).Graded()
+                        @Html.Bootstrap().InlineLabel("Warning").Color(BootstrapColors.Warning).Graded()
+                        @Html.Bootstrap().InlineLabel("Sky").Color(BootstrapColors.Sky).Graded()
+                        @Html.Bootstrap().InlineLabel("Blueberry").Color(BootstrapColors.Blueberry).Graded()
+                        @Html.Bootstrap().InlineLabel("Yellow").Color(BootstrapColors.Yellow).Graded()
+                        @Html.Bootstrap().InlineLabel("Darkorange").Color(BootstrapColors.Darkorange).Graded()
+                        @Html.Bootstrap().InlineLabel("Magenta").Color(BootstrapColors.Magenta).Graded()
+                        @Html.Bootstrap().InlineLabel("Purple").Color(BootstrapColors.Purple).Graded()
+                        @Html.Bootstrap().InlineLabel("Maroon").Color(BootstrapColors.Maroon).Graded()
+                        @Html.Bootstrap().InlineLabel("Darkpink").Color(BootstrapColors.Darkpink).Graded()
+                        @Html.Bootstrap().InlineLabel("Pink").Color(BootstrapColors.Pink).Graded()
+                        @Html.Bootstrap().InlineLabel("Azure").Color(BootstrapColors.Azure).Graded()
+                        @Html.Bootstrap().InlineLabel("Orange").Color(BootstrapColors.Orange).Graded()
+                    </div>
+                    <hr class="wide" />
+                    <div class="Badges-container">
+                        <h6>Badges</h6>
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Default).Graded()
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Primary).Graded()
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Info).Graded()
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Success).Graded()
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Danger).Graded()
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Warning).Graded()
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Sky).Graded()
+                        @Html.Bootstrap().Badge("8").Color(BootstrapColors.Blueberry).Graded()
+                        @Html.Bootstrap().Badge("9").Color(BootstrapColors.Yellow).Graded()
+                        @Html.Bootstrap().Badge("0").Color(BootstrapColors.Darkorange).Graded()
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Magenta).Graded()
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Purple).Graded()
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Maroon).Graded()
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Darkpink).Graded()
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Pink).Graded()
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Azure).Graded()
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Orange).Graded()
+                    </div>
+                    <hr class="wide" />
+                    <div class="Badges-container">
+                        <h6>Square Badges</h6>
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Default).Graded().Square()
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Primary).Graded().Square()
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Info).Graded().Square()
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Success).Graded().Square()
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Danger).Graded().Square()
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Warning).Graded().Square()
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Sky).Graded().Square()
+                        @Html.Bootstrap().Badge("8").Color(BootstrapColors.Blueberry).Graded().Square()
+                        @Html.Bootstrap().Badge("9").Color(BootstrapColors.Yellow).Graded().Square()
+                        @Html.Bootstrap().Badge("0").Color(BootstrapColors.Darkorange).Graded().Square()
+                        @Html.Bootstrap().Badge("1").Color(BootstrapColors.Magenta).Graded().Square()
+                        @Html.Bootstrap().Badge("2").Color(BootstrapColors.Purple).Graded().Square()
+                        @Html.Bootstrap().Badge("3").Color(BootstrapColors.Maroon).Graded().Square()
+                        @Html.Bootstrap().Badge("4").Color(BootstrapColors.Darkpink).Graded().Square()
+                        @Html.Bootstrap().Badge("5").Color(BootstrapColors.Pink).Graded().Square()
+                        @Html.Bootstrap().Badge("6").Color(BootstrapColors.Azure).Graded().Square()
+                        @Html.Bootstrap().Badge("7").Color(BootstrapColors.Orange).Graded().Square()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title before-darkorange"><i class="fa fa-list-alt darkorange"></i>DropDowns</h5>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-blue">Default DropDown</div>
+                    <div class="dropdown-container">
+                        <div class="dropdown-preview">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" tabindex="-1">Action</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">Another action</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">Something else here</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">Separated link</a>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">Another link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-darkorange">Multi Level DropDown</div>
+                    <div class="dropdown-container">
+                        <div class="dropdown-preview">
+                            <ul class="dropdown-menu dropdown-darkorange">
+                                <li>
+                                    <a href="#" tabindex="-1">Action</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">Another action</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">Something else here</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li class="dropdown-hover">
+                                    <a href="#" tabindex="-1" class="clearfix">
+                                        <span class="pull-left">More options</span>
+
+                                        <i class="dropdown-expand fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-danger">
+                                        <li>
+                                            <a href="#" tabindex="-1">Second level link</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" tabindex="-1">Second level link</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" tabindex="-1">Second level link</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" tabindex="-1">Second level link</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" tabindex="-1">Second level link</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">Another Option</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-palegreen">DropDown With Icons</div>
+                    <div class="dropdown-container">
+                        <div class="dropdown-preview">
+                            <ul class="dropdown-menu dropdown-palegreen">
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <i class="dropdown-icon fa fa-camera"></i>
+                                        Gallery
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <i class="dropdown-icon fa fa-envelope"></i>
+                                        Inbox
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <i class="dropdown-icon fa fa-cloud-download"></i>
+                                        Download
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <i class="dropdown-icon glyphicon glyphicon-cog"></i>
+                                        Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <i class="dropdown-icon glyphicon glyphicon-log-out"></i>
+                                        Log Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-yellow">DropDown With Labels & Badges</div>
+                    <div class="dropdown-container">
+                        <div class="dropdown-preview">
+                            <ul class="dropdown-menu dropdown-purple">
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        Notifications
+                                        <span class="label label-darkorange pull-right">2</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        Emails
+                                        <span class="badge badge-info graded pull-right">5</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" tabindex="-1">Warnings</a>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">Followers</a>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">Issues</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="well with-header with-footer">
+            <div class="header bordered-blue">Colored DropDown Buttons</div>
+            <div id="dropdownbuttons">
+                <div class="btn-group">
+                    <a class="btn btn-default " href="javascript:void(0);">Default</a>
+                    <a class="btn btn-default  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-info " href="javascript:void(0);">info</a>
+                    <a class="btn btn-info  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-info">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-primary " href="javascript:void(0);">Primary</a>
+                    <a class="btn btn-primary  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-primary">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-success " href="javascript:void(0);">Success</a>
+                    <a class="btn btn-success  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-success">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-warning " href="javascript:void(0);">Warning</a>
+                    <a class="btn btn-warning  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-warning">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-danger " href="javascript:void(0);">Danger</a>
+                    <a class="btn btn-danger  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-danger">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-default " href="javascript:void(0);">Inverse</a>
+                    <a class="btn btn-default  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-inverse">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-blue " href="javascript:void(0);">Blue</a>
+                    <a class="btn btn-blue  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-blue">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-maroon " href="javascript:void(0);">Blue</a>
+                    <a class="btn btn-maroon  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-maroon">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-darkorange " href="javascript:void(0);">Combined</a>
+                    <a class="btn btn-palegreen  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu dropdown-palegreen">
+                        <li>
+                            <a href="javascript:void(0);">Action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Another action</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer"><code>class="dropdown-menu dropdown-info"</code></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title before-success"><i class="glyphicon glyphicon-arrow-right success"></i>Progress Bars</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-purple">Simple Progress Bars</div>
+                    <h6>Basic</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress1")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar1", 20, BootstrapColors.Info)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress2")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(@"60% Complete (warning)", "progressbar2", 60, BootstrapColors.Warning)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress3")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar3", 20, BootstrapColors.Danger)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress4")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar4", 40, BootstrapColors.Magenta)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress5")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar5", 60, BootstrapColors.Purple)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress12")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar12", 80, BootstrapColors.Maroon)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Stripped</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress13").Stripped()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar13", 40, BootstrapColors.Palegreen)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress14").Stripped()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar14", 50, BootstrapColors.Inverse)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress15").Stripped()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar15", 60, BootstrapColors.Success)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress16").Stripped()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar16", 20, BootstrapColors.Info)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress17").Stripped()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar17", 60, BootstrapColors.Warning)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress18").Stripped()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar18", 80, BootstrapColors.Danger)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Animated</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress19").Active()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar19", 40, BootstrapColors.Orange)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress20").Active()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar20", 50, BootstrapColors.Sky)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress21").Active()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar21", 60, BootstrapColors.Darkorange)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress22").Active()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar22", 20, BootstrapColors.Blueberry)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress23").Active()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar23", 60, BootstrapColors.Warning)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress24").Active()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar24", 80, BootstrapColors.Danger)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Stacked</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("stackedProgress")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "stackedProgressaBar1", 35, BootstrapColors.Success)) { };
+                        using (var progressBar = progress.BeginProgressBar(null, "stackedProgressaBar1", 20, BootstrapColors.Warning)) { };
+                        using (var progressBar = progress.BeginProgressBar(null, "stackedProgressaBar1", 10, BootstrapColors.Danger)) { };
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-warning">Advances Progress Bars</div>
+                    <h6>Sizes</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress6").Size(BootstrapSizes.XXSmall)))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar6", 20, BootstrapColors.Info)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress7").Size(BootstrapSizes.XSmall)))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar7", 60, BootstrapColors.Warning)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress8").Size(BootstrapSizes.Small)))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar8", 20, BootstrapColors.Danger)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress9")))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar9", 40, BootstrapColors.Magenta)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress10").Size(BootstrapSizes.Large)))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar10", 60, BootstrapColors.Purple)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("progress11").Size(BootstrapSizes.XLarge)))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "progressbar11", 80, BootstrapColors.Maroon)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Bordered</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("borderedProgress1").Size(BootstrapSizes.XXSmall).Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "borderedProgressBar1", 30, BootstrapColors.Inverse)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("borderedProgress2").Size(BootstrapSizes.XSmall).Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "borderedProgressBar2", 20, BootstrapColors.Orange)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("borderedProgress3").Size(BootstrapSizes.Small).Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "borderedProgressBar3", 40, BootstrapColors.Blue)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("borderedProgress4").Size(BootstrapSizes.Small).Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "borderedProgressBar4", 60, BootstrapColors.Blueberry)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("borderedProgress5").Size(BootstrapSizes.Large).Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar("20%", "borderedProgressBar5", 20, BootstrapColors.Darkorange)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("borderedProgress6").Size(BootstrapSizes.XLarge).Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "borderedProgressBar6", 40, BootstrapColors.Magenta)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Right Aligned</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("rightProgress").Align(Direction.Right)))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "rightProgressBar", 40, BootstrapColors.Blue)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Without Radius Border</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("noRadiusProgress").NoRadiusBordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "noRadiusProgressBar", 40, BootstrapColors.Inverse)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Shadowed</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("shadowProgress").Shadowed()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "shadowProgressBar", 20, BootstrapColors.Info)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("shadowProgress2").Shadowed()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "shadowProgressBar2", 60, BootstrapColors.Warning)) { };
+                    }
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("shadowProgress3").Shadowed()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "shadowProgressBar3", 80, BootstrapColors.Danger)) { };
+                    }
+                    <hr class="wide" />
+                    <h6>Bordered & Stacked</h6>
+                    @using (var progress = Html.Bootstrap().Begin(new Progress("stackedProgress").Bordered()))
+                    {
+                        using (var progressBar = progress.BeginProgressBar(null, "stackedProgressaBar1", 35, BootstrapColors.Success)) { };
+                        using (var progressBar = progress.BeginProgressBar(null, "stackedProgressaBar2", 20, BootstrapColors.Warning)) { };
+                        using (var progressBar = progress.BeginProgressBar(null, "stackedProgressaBar3", 10, BootstrapColors.Danger)) { };
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div class="well with-header">
+            <div class="header bordered-warning">Vertical Progress Bars</div>
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress1").Vertical().Size(BootstrapSizes.XLarge).Align(Direction.Top)))
+            {
+                using (var progressBar = progress.BeginProgressBar("40%", "verticalProgressBar1", 40, BootstrapColors.Blue)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress2").Vertical().Size(BootstrapSizes.Large).Align(Direction.Top).Stripped()))
+            {
+                using (var progressBar = progress.BeginProgressBar("40%", "verticalProgressBar2", 40, BootstrapColors.Magenta)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress3").Vertical().Align(Direction.Bottom).Stripped()))
+            {
+                using (var progressBar = progress.BeginProgressBar("50%", "verticalProgressBar3", 50, BootstrapColors.Orange)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress4").Vertical().Size(BootstrapSizes.Small).Align(Direction.Top).Active()))
+            {
+                using (var progressBar = progress.BeginProgressBar(null, "verticalProgressBar4", 30, BootstrapColors.Success)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress5").Vertical().Size(BootstrapSizes.XSmall)))
+            {
+                using (var progressBar = progress.BeginProgressBar(null, "verticalProgressBar5", 50, BootstrapColors.Blueberry)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress6").Vertical().Align(Direction.Top).Size(BootstrapSizes.XXSmall)))
+            {
+                using (var progressBar = progress.BeginProgressBar(null, "verticalProgressBar6", 50, BootstrapColors.Danger)) { };
+            }
+
+            <hr class="wide" />
+            <h6>Bordered</h6>
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress1").Vertical().Size(BootstrapSizes.XLarge).Align(Direction.Top).Bordered()))
+            {
+                using (var progressBar = progress.BeginProgressBar("40%", "verticalProgressBar1", 40, BootstrapColors.Blue)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress2").Vertical().Size(BootstrapSizes.Large).Align(Direction.Top).Stripped().Bordered()))
+            {
+                using (var progressBar = progress.BeginProgressBar("40%", "verticalProgressBar2", 40, BootstrapColors.Magenta)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress3").Vertical().Align(Direction.Bottom).Stripped().Bordered()))
+            {
+                using (var progressBar = progress.BeginProgressBar("50%", "verticalProgressBar3", 50, BootstrapColors.Orange)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress4").Vertical().Size(BootstrapSizes.Small).Align(Direction.Top).Active().Bordered()))
+            {
+                using (var progressBar = progress.BeginProgressBar(null, "verticalProgressBar4", 30, BootstrapColors.Success)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress5").Vertical().Size(BootstrapSizes.XSmall).Bordered()))
+            {
+                using (var progressBar = progress.BeginProgressBar(null, "verticalProgressBar5", 50, BootstrapColors.Blueberry)) { };
+            }
+            @using (var progress = Html.Bootstrap().Begin(new Progress("vertivalProgress6").Vertical().Align(Direction.Top).Size(BootstrapSizes.XXSmall).Bordered()))
+            {
+                using (var progressBar = progress.BeginProgressBar(null, "verticalProgressBar6", 50, BootstrapColors.Danger)) { };
+            }
+        </div>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div class="well with-header">
+            <div class="header bordered-lightred">Pagination</div>
+            <h6>Default</h6>
+            <ul class="pagination">
+                <li class="disabled"><a href="#">«</a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+            <hr class="wide" />
+            <h6>Sizes</h6>
+            <div>
+                <ul class="pagination pagination-lg">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="pagination pagination-sm">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+            <hr class="wide" />
+            <h6>Pager</h6>
+            <div>
+                <ul class="pager">
+                    <li class="disabled"><a href="#">← Older</a></li>
+                    <li><a href="#">Newer →</a></li>
+                </ul>
+            </div>
+            <div class="horizontal-space"></div>
+            <hr class="wide" />
+            <h6>Aligned Pager</h6>
+            <ul class="pager">
+                <li class="previous"><a href="#">← Older</a></li>
+                <li class="next"><a href="#">Newer →</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,772 @@
+﻿@using System.Drawing
+@{
+    ViewBag.Title = "Buttons";
+    ViewBag.Description = "buttons";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="well with-header with-footer">
+            <div class="header bordered-blue">Basic Buttons</div>
+            <div class="buttons-preview">
+                @Html.Bootstrap().Button().Text("Link").Color(BootstrapColors.Default).HtmlAttributes(new { @class = "btn-link" })
+                @Html.Bootstrap().Button().Text("Default").Color(BootstrapColors.Default)
+                @Html.Bootstrap().Button().Text("Primary").Color(BootstrapColors.Primary)
+                @Html.Bootstrap().Button().Text("Info").Color(BootstrapColors.Info)
+                @Html.Bootstrap().Button().Text("Success").Color(BootstrapColors.Success)
+                @Html.Bootstrap().Button().Text("Warning").Color(BootstrapColors.Warning)
+                @Html.Bootstrap().Button().Text("Danger").Color(BootstrapColors.Danger)
+            </div>
+            <div class="footer"><code>.btn .btn-default, .btn-primary, ...</code></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="well with-header  with-footer">
+            <div class="header bordered-blue">Colered Buttons</div>
+            <div class="buttons-preview">
+                @Html.Bootstrap().Button().Text("Blue").Color(BootstrapColors.Blue)
+                @Html.Bootstrap().Button().Text("Sky").Color(BootstrapColors.Sky)
+                @Html.Bootstrap().Button().Text("Azure").Color(BootstrapColors.Azure)
+                @Html.Bootstrap().Button().Text("Palegreen").Color(BootstrapColors.Palegreen)
+                @Html.Bootstrap().Button().Text("Yellow").Color(BootstrapColors.Yellow)
+                @Html.Bootstrap().Button().Text("Darkorange").Color(BootstrapColors.Darkorange)
+                @Html.Bootstrap().Button().Text("Magenta").Color(BootstrapColors.Magenta)
+                @Html.Bootstrap().Button().Text("Purple").Color(BootstrapColors.Purple)
+                @Html.Bootstrap().Button().Text("Maroon").Color(BootstrapColors.Maroon)
+            </div>
+            <div class="footer"><code>.btn .btn-blue, .btn-purple, ...</code></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <div class="well with-header  with-footer">
+                <div class="header bordered-blue">Shiny Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("Default").Color(BootstrapColors.Default).Shiny()
+                    @Html.Bootstrap().Button().Text("Primary").Color(BootstrapColors.Primary).Shiny()
+                    @Html.Bootstrap().Button().Text("Info").Color(BootstrapColors.Info).Shiny()
+                    @Html.Bootstrap().Button().Text("Success").Color(BootstrapColors.Success).Shiny()
+                    @Html.Bootstrap().Button().Text("Warning").Color(BootstrapColors.Warning).Shiny()
+                    @Html.Bootstrap().Button().Text("Danger").Color(BootstrapColors.Danger).Shiny()
+                    @Html.Bootstrap().Button().Text("Blue").Color(BootstrapColors.Blue).Shiny()
+                    @Html.Bootstrap().Button().Text("Sky").Color(BootstrapColors.Sky).Shiny()
+                    @Html.Bootstrap().Button().Text("Azure").Color(BootstrapColors.Azure).Shiny()
+                    @Html.Bootstrap().Button().Text("Palegreen").Color(BootstrapColors.Palegreen).Shiny()
+                    @Html.Bootstrap().Button().Text("Yellow").Color(BootstrapColors.Yellow).Shiny()
+                    @Html.Bootstrap().Button().Text("Darkorange").Color(BootstrapColors.Darkorange).Shiny()
+                    @Html.Bootstrap().Button().Text("Magenta").Color(BootstrapColors.Magenta).Shiny()
+                    @Html.Bootstrap().Button().Text("Purple").Color(BootstrapColors.Purple).Shiny()
+                    @Html.Bootstrap().Button().Text("Maroon").Color(BootstrapColors.Maroon).Shiny()
+                </div>
+                <div class="footer"><code>.btn .btn-blue .shiny, .btn-purple .shiny, ...</code></div>
+            </div>
+        </div>
+    </div>
+   <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header  with-footer">
+                <div class="header bordered-blue">Sized Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("Large").Color(BootstrapColors.Blue).Size(ButtonSize.Large)
+                    @Html.Bootstrap().Button().Text("Default").Color(BootstrapColors.Yellow)
+                    @Html.Bootstrap().Button().Text("Mini").Color(BootstrapColors.Palegreen).Size(ButtonSize.Small)
+                    @Html.Bootstrap().Button().Text("Small").Color(BootstrapColors.Darkorange).Size(ButtonSize.Mini)
+                </div>
+                <div class="footer"><code>.btn .btn-lg, .btn-sm, .btn-xs</code></div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header  with-footer">
+                <div class="header bordered-blue">Circle Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Color(BootstrapColors.Warning).Text("").Size(ButtonSize.Large).Circular().IconPrepend(GlyphIcons.Camera)
+                    @Html.Bootstrap().Button().Color(BootstrapColors.Info).Text("").Circular().IconPrepend(GlyphIcons.Retweet)
+                    @Html.Bootstrap().Button().Color(BootstrapColors.Danger).Text("").Size(ButtonSize.Small).Circular().IconPrepend(GlyphIcons.List)
+                    @Html.Bootstrap().Button().Color(BootstrapColors.Default).Text("").Size(ButtonSize.Mini).Circular().IconPrepend(GlyphIcons.Ok)
+                </div>
+                <div class="footer"><code>.btn .btn-circle</code></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Buttons With Icon</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("Add").Color(BootstrapColors.Default).HtmlAttributes(new { @class = "purple" }).IconPrepend(FontAwesome.Plus)
+                    @Html.Bootstrap().Button().Text("Buy").Color(BootstrapColors.Primary).IconPrepend(FontAwesome.ShoppingCart)
+                    @Html.Bootstrap().Button().Text("Delete").Color(BootstrapColors.Danger).IconPrepend(FontAwesome.Times)
+                    @Html.Bootstrap().Button().Text("Ok").Color(BootstrapColors.Success).IconAppend(FontAwesome.Check)
+                    @Html.Bootstrap().Button().Text("Info").Color(BootstrapColors.Info).IconAppend(FontAwesome.Warning)
+                </div>
+                <div class="footer"><code>< i class="fa fa-times" /></code></div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Labeled Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("Success").Color(BootstrapColors.Palegreen).Labeled().IconPrepend(GlyphIcons.Ok)
+                    @Html.Bootstrap().Button().Text("Error").Color(BootstrapColors.Darkorange).Labeled().IconPrepend(GlyphIcons.Remove)
+                    @Html.Bootstrap().Button().Text("Warning").Color(BootstrapColors.Yellow).Labeled().IconPrepend(FontAwesome.Warning)
+                    @Html.Bootstrap().Button().Text("Info").Color(BootstrapColors.Blue).Labeled().IconPrepend(FontAwesome.Exclamation)
+                </div>
+                <div class="footer"><code>.btn .btn-labeled</code></div>
+            </div>
+        </div>
+    </div>
+   <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Icon Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).HtmlAttributes(new { @class = "blue" }).Size(ButtonSize.Large).Shiny().IconOnly().IconPrepend(FontAwesome.Plus)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).HtmlAttributes(new { @class = "yellow" }).Shiny().IconOnly().IconPrepend(FontAwesome.Lock)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).HtmlAttributes(new { @class = "danger" }).Shiny().Size(ButtonSize.Small).IconOnly().IconPrepend(FontAwesome.Times)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).HtmlAttributes(new { @class = "success" }).Shiny().Size(ButtonSize.Mini).IconOnly().IconPrepend(FontAwesome.Cog)
+                    <hr class="wide" />
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Blue).Size(ButtonSize.Large).Shiny().IconOnly().IconPrepend(FontAwesome.Plus)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Yellow).Shiny().IconOnly().IconPrepend(FontAwesome.Lock)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Danger).Shiny().Size(ButtonSize.Small).IconOnly().IconPrepend(FontAwesome.Times)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Palegreen).Shiny().Size(ButtonSize.Mini).IconOnly().IconPrepend(FontAwesome.Check)
+                </div>
+                <div class="footer"><code>.btn .icon-only</code></div>
+            </div>
+           <div class="well with-header with-footer">
+                <div class="header bordered-blue">Block Buttons</div>
+                <div class="clearfix">
+                    @Html.Bootstrap().ActionLinkButton("Action Button", "Buttons", "Home").ButtonBlock().Color(BootstrapColors.Yellow)
+                    @Html.Bootstrap().Button().Text("Button").Color(BootstrapColors.Warning).Shiny().ButtonBlock()
+                    @Html.Bootstrap().Button().Text("Input").Color(BootstrapColors.Darkorange).Shiny().ButtonBlock()
+                    @Html.Bootstrap().SubmitButton().Text("Submit Button").Color(BootstrapColors.Danger).Shiny().ButtonBlock()
+                </div>
+                <div class="footer"><code>.btn .btn-block</code></div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">DropDown Buttons</div>
+                <div class="buttons-preview">
+                    <div class="btn-group">
+                        <a class="btn btn-default shiny " href="javascript:void(0);">Default</a>
+                        <a class="btn btn-default  dropdown-toggle shiny" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-primary shiny" href="javascript:void(0);">Primary</a>
+                        <a class="btn btn-primary dropdown-toggle shiny" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-primary">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-danger shiny">Danger</a>
+                        <a class="btn btn-danger dropdown-toggle shiny" data-toggle="dropdown"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-danger" role="menu">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-warning shiny">Warning</a>
+                        <a class="btn btn-warning dropdown-toggle shiny" data-toggle="dropdown"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-warning" role="menu">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="wide" />
+                    <div class="btn-group">
+                        <a class="btn btn-lg btn-default" href="javascript:void(0);">Large</a>
+                        <a class="btn btn-lg btn-default  dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-blue" href="javascript:void(0);">Default</a>
+                        <a class="btn btn-blue dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-blue">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-darkorange">Small</a>
+                        <a class="btn btn-sm btn-darkorange dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-darkorange" role="menu">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-xs btn-yellow">mini</a>
+                        <a class="btn btn-xs btn-yellow dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-yellow" role="menu">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="wide" />
+                    <div class="btn-group dropup">
+                        <a class="btn btn-default shiny">
+                            Drop Up
+                        </a>
+                        <a class="btn btn-default dropdown-toggle shiny" data-toggle="dropdown">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                        <a class="btn btn-sky shiny">
+                            Drop Up
+                        </a>
+                        <a class="btn btn-sky dropdown-toggle shiny" data-toggle="dropdown">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-sky">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                        <a class="btn btn-magenta shiny">
+                            Drop Up
+                        </a>
+                        <a class="btn btn-magenta dropdown-toggle shiny" data-toggle="dropdown">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-magenta">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                        <a class="btn btn-purple shiny">
+                            Drop Up
+                        </a>
+                        <a class="btn btn-purple dropdown-toggle shiny" data-toggle="dropdown">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-purple">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="wide" />
+                    <div class="btn-group">
+                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Action <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-azure dropdown-toggle" data-toggle="dropdown">
+                            Action <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-azure">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-maroon dropdown-toggle" data-toggle="dropdown">
+                            Action <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-maroon">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="wide" />
+                    <div class="btn-group">
+                        <a class="btn btn-success" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-palegreen dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-palegreen">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-danger" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-warning">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-maroon" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-magenta dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-magenta">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-azure" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-blue dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-blue">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-success" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-darkorange dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-darkorange">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-darkorange whitesmoke" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-danger">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-blue whitesmoke" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-palegreen dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-palegreen">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-palegreen whitesmoke" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-yellow dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-yellow">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-magenta whitesmoke" href="javascript:void(0);">Combined</a>
+                        <a class="btn btn-maroon dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-maroon">
+                            <li>
+                                <a href="javascript:void(0);">Action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Another action</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="javascript:void(0);">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer"><code></code></div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Button Groups</div>
+                <div class="buttons-preview">
+                    <div class="btn-toolbar">
+                        <div class="btn-group">
+                            @Html.Bootstrap().Button().Text("1").Color(BootstrapColors.Default)
+                            @Html.Bootstrap().Button().Text("2").Color(BootstrapColors.Default)
+                            @Html.Bootstrap().Button().Text("3").Color(BootstrapColors.Default)
+                            @Html.Bootstrap().Button().Text("4").Color(BootstrapColors.Default)
+                        </div>
+                        <div class="btn-group">
+                            @Html.Bootstrap().Button().Text("5").Color(BootstrapColors.Default)
+                            @Html.Bootstrap().Button().Text("6").Color(BootstrapColors.Default)
+                            @Html.Bootstrap().Button().Text("7").Color(BootstrapColors.Default)
+                        </div>
+                        <div class="btn-group">
+                            @Html.Bootstrap().Button().Text("8").Color(BootstrapColors.Default)
+                        </div>
+                    </div>
+                    <hr class="wide" />
+                   <div class="btn-group">
+                        @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignLeft)
+                        @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignCenter)
+                        @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignRight)
+                        @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignJustify)
+                    </div>
+                    <hr class="wide" />
+                    <div class="btn-group">
+                        @Html.Bootstrap().Button().Text("Profile").Color(BootstrapColors.Default).IconPrepend(FontAwesome.User)
+                        @Html.Bootstrap().Button().Text("Settings").Color(BootstrapColors.Default).IconPrepend(FontAwesome.Cogs)
+                        @Html.Bootstrap().Button().Text("Feeds").Color(BootstrapColors.Default).IconPrepend(FontAwesome.Bullhorn)
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-ellipsis-h"></i> More <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Dropdown link</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dropdown link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="wide" />
+
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-default">Button</button>
+                    <div class="btn-group">
+                        <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                            <li>
+                                <a href="#">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-default">Button</button>
+                    <button type="button" class="btn btn-default">Button</button>
+                    <div class="btn-group">
+                        <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+                            <li>
+                                <a href="#">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group-vertical">
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignLeft)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignCenter)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignRight)
+                    @Html.Bootstrap().Button().Text("").Color(BootstrapColors.Default).IconPrepend(FontAwesome.AlignJustify)
+                </div>
+                <div class="btn-group-vertical">
+                    @Html.Bootstrap().Button().Text("Top").Color(BootstrapColors.Default)
+                    @Html.Bootstrap().Button().Text("Middle").Color(BootstrapColors.Default)
+                    @Html.Bootstrap().Button().Text("Bottom").Color(BootstrapColors.Default)
+                </div>
+                <div class="footer"><code>.btn .btn-group .btn-group-vertical</code></div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Justified Buttons</div>
+                <div class="buttons-preview">
+                    <div class="btn-group btn-group-justified">
+                        @Html.Bootstrap().Button().Text("Left").Color(BootstrapColors.Default)
+                        @Html.Bootstrap().Button().Text("Middle").Color(BootstrapColors.Default)
+                        @Html.Bootstrap().Button().Text("Right").Color(BootstrapColors.Default)
+                    </div>
+                    <div class="btn-group btn-group btn-group-justified">
+                        @Html.Bootstrap().Button().Text("Good").Color(BootstrapColors.Palegreen)
+                        @Html.Bootstrap().Button().Text("Bad").Color(BootstrapColors.Warning)
+                        @Html.Bootstrap().Button().Text("Ugly").Color(BootstrapColors.Danger)
+                    </div>
+
+                </div>
+                <div class="footer"><code>.btn-group .btn-group-justified</code></div>
+            </div>
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Active Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("Active button").Color(BootstrapColors.Blue).HtmlAttributes(new { @class = "active" })
+                    @Html.Bootstrap().Button().Text("Active button").Color(BootstrapColors.Darkorange).HtmlAttributes(new { @class = "active" })
+                </div>
+                <div class="footer"><code>.btn .active"</code></div>
+            </div>
+            <div class="well with-header with-footer">
+                <div class="header bordered-blue">Disabled Buttons</div>
+                <div class="buttons-preview">
+                    @Html.Bootstrap().Button().Text("Disabled button").Color(BootstrapColors.Yellow).Disabled()
+                    @Html.Bootstrap().Button().Text("Disabled button").Color(BootstrapColors.Palegreen).Disabled()
+                </div>
+                <div class="footer"><code>disabled="disabled"</code></div>
+            </div>
+        </div>
+    </div>

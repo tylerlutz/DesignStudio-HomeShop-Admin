@@ -1,0 +1,241 @@
+﻿@{
+    ViewBag.Title = "Alerts";
+    ViewBag.Description = "tooltips and notifications";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h5 class="row-title"><i class="fa fa-warning themeprimary"></i>Alerts</h5>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-darkorange">Default Alerts</div>
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Warning).Closeable()))
+                    {
+                        <i class="fa-fw fa fa-warning"></i>
+                        <strong>Warning</strong> <span>Your monthly traffic is reaching limit.</span>
+                    }
+
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Success).Closeable()))
+                    {
+                        <i class="fa-fw fa fa-check"></i>
+                        <strong>Success</strong><span>The page has been added.</span>
+                    }
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Info).Closeable()))
+                    {
+                        <i class="fa-fw fa fa-info"></i>
+                        <strong>Info!</strong>    <span>You have 8 unread messages.</span>
+                    }
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Error).Closeable()))
+                    {
+                        <i class="fa-fw fa fa-times"></i>
+                        <strong>Error!</strong>    <span>Update has failed.</span>
+                    }
+
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="well with-header">
+                    <div class="header bordered-blueberry">Rounded & Shadowed Alerts</div>
+
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Warning).Closeable().Shadowed().RadiusBordered()))
+                    {
+                        <span class="badge badge-success graded">
+                            0
+                        </span>
+                        <strong>Warning</strong>    <span>Your monthly traffic is reaching limit.</span>
+                    }
+
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Success).Closeable().Shadowed().RadiusBordered()))
+                    {
+                        <span class="badge badge-darkorange graded">
+                            2
+                        </span>
+                        <strong>Success</strong>    <span>Two Tasks Are Completed.</span>
+                    }
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Info).Closeable().Shadowed().RadiusBordered()))
+                    {
+                        <span class="badge badge-sky graded">
+                            8
+                        </span>
+                        <strong>Info!</strong>    <span>You have 8 unread messages.</span>
+                    }
+                    @using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Error).Closeable().Shadowed().RadiusBordered()))
+                    {
+                        <i class="fa-fw fa fa-times"></i>
+                        <strong>Error!</strong>    <span>Update has failed.</span>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <h5 class="row-title before-darkorange"><i class="fa fa-flash darkorange"></i>Tooltips</h5>
+                <div class="well bordered-top bordered-darkorange">
+                    <h5>Inline Tooltips</h5>
+                    <p>
+                        Tight pants next level keffiyeh <a href="#" class="tooltips" data-toggle="tooltip" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" class="tooltips tooltip-pink" data-toggle="tooltip" data-original-title="Another tooltip">have a</a> terry richardson vinyl chambray. <a href="#" class="tooltips tooltip-blueberry" title="" data-toggle="tooltip" data-original-title="12">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+                    </p>
+                    <hr class="wide" />
+                    <h5>Tooltip Positions</h5>
+                    <div class="buttons-preview">
+                        @Html.Bootstrap().Button().Text("Top").Tooltip(new Tooltip("Tooltip in Top").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Left").Tooltip(new Tooltip("Tooltip in Left").Placement("left"))
+                        @Html.Bootstrap().Button().Text("Right").Tooltip(new Tooltip("Tooltip in Right").Placement("right"))
+                        @Html.Bootstrap().Button().Text("Bottom").Tooltip(new Tooltip("Tooltip in Bottom").Placement("bottom"))
+                    </div>
+                    <hr class="wide" />
+                    <h5>Tooltip Colors</h5>
+                    <div class="buttons-preview">
+                        @Html.Bootstrap().Button().Text("Danger").Color(BootstrapColors.Danger).HtmlAttributes(new { @class = "tooltip-danger" }).Tooltip(new Tooltip("Danger Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Warning").Color(BootstrapColors.Warning).HtmlAttributes(new { @class = "tooltip-warning" }).Tooltip(new Tooltip("Warning Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Info").Color(BootstrapColors.Info).HtmlAttributes(new { @class = "tooltip-info" }).Tooltip(new Tooltip("Info Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Success").Color(BootstrapColors.Success).HtmlAttributes(new { @class = "tooltip-success" }).Tooltip(new Tooltip("Success Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Blue").Color(BootstrapColors.Blue).HtmlAttributes(new { @class = "tooltip-blue" }).Tooltip(new Tooltip("Blue Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Pale Green").Color(BootstrapColors.Palegreen).HtmlAttributes(new { @class = "tooltip-palegreen" }).Tooltip(new Tooltip("Pale Green Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Darkorange").Color(BootstrapColors.Darkorange).HtmlAttributes(new { @class = "tooltip-darkorange" }).Tooltip(new Tooltip("Darkorange Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Magenta").Color(BootstrapColors.Magenta).HtmlAttributes(new { @class = "tooltip-magenta" }).Tooltip(new Tooltip("Magenta Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Purple").Color(BootstrapColors.Purple).HtmlAttributes(new { @class = "tooltip-purple" }).Tooltip(new Tooltip("Purple Tooltip").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Maroon").Color(BootstrapColors.Maroon).HtmlAttributes(new { @class = "tooltip-maroon" }).Tooltip(new Tooltip("Maroon Tooltip").Placement("top"))
+                    </div>
+                    <hr class="wide" />
+                    <h5>Tooltip Template & Size</h5>
+                    <div class="buttons-preview">
+                        @Html.Bootstrap().Button().Text("With Image").Tooltip(new Tooltip("<img src='/assets/img/avatars/divyia.jpg'>").Placement("top"))
+                        @Html.Bootstrap().Button().Text("Large Tip").Color(BootstrapColors.Danger).HtmlAttributes(new { @class = "tooltip-danger tooltip-lg" }).Tooltip(new Tooltip("Large Tooltip").Placement("top"))
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <h5 class="row-title before-blueberry"><i class="fa fa-flash blueberry"></i>Toastr Notifications</h5>
+                <div class="well bordered-top bordered-blueberry">
+                    <h5>Notifications All Around The Page</h5>
+                    <div class="buttons-preview">
+                        <button class="btn btn-default" onclick="javascript: Notify('This is a Top-Left Notification.', 'top-left', '5000', 'danger', 'fa-desktop', true); return false;">Top Left</button>
+                        <button class="btn btn-default" onclick="javascript: Notify('This is a Top-Right Notification.', 'top-right', '5000', 'success', 'fa-list', true); return false;">Top Right</button>
+                        <button class="btn btn-default" onclick="javascript: Notify('This is a Bottom-Left Notification.', 'bottom-left', '5000', 'info', 'fa-tag', true); return false;">Bottom Left</button>
+                        <button class="btn btn-default" onclick="javascript: Notify('This is a Bottom-Right Notification.', 'bottom-right', '5000', 'warning', 'fa-edit', true); return false;">Bottom Right</button>
+                    </div>
+                    <hr class="wide" />
+                    <h5>Colored Notifications</h5>
+                    <div class="buttons-preview">
+                        <button class="btn btn-danger" onclick="javascript: Notify('Something Went Wrong!', 'top-right', '5000', 'danger', 'fa-bolt', true); return false;">Danger</button>
+                        <button class="btn btn-warning" onclick="javascript: Notify('You Must Worry', 'top-right', '5000', 'warning', 'fa-warning', true); return false;">Warning</button>
+                        <button class="btn btn-info" onclick="javascript: Notify('You`ve got mail.', 'top-right', '5000', 'info', 'fa-envelope', true); return false;">Info</button>
+                        <button class="btn btn-success" onclick="javascript: Notify('Everything is allright', 'top-right', '5000', 'success', 'fa-check', true); return false;">Success</button>
+                        <button class="btn btn-blue" onclick="javascript: Notify('Im a Blue notification', 'top-right', '5000', 'blue', 'fa-home', true); return false;">Blue</button>
+                        <button class="btn btn-palegreen" onclick="javascript: Notify('Im a Palegreen notification', 'top-right', '5000', 'palegreen', 'fa-home', true); return false;">PaleGreen</button>
+                        <button class="btn btn-darkorange" onclick="javascript: Notify('Im a Darkorange notification', 'top-right', '5000', 'darkorange', 'fa-home', true); return false;">Darkorange</button>
+                        <button class="btn btn-magenta" onclick="javascript: Notify('Im a Magenta notification', 'top-right', '5000', 'magenta', 'fa-home', true); return false;">Magenta</button>
+                        <button class="btn btn-purple" onclick="javascript: Notify('Im a Purple notification', 'top-right', '5000', 'purple', 'fa-home', true); return false;">Purple</button>
+                        <button class="btn btn-maroon" onclick="javascript: Notify('Im a Maroon notification', 'top-right', '5000', 'maroon', 'fa-home', true); return false;">Maroon</button>
+                    </div>
+                    <hr class="wide" />
+                    <h5>Notification With Html Content</h5>
+                    <div class="buttons-preview">
+                        <button class="btn btn-default" onclick="javascript: Notify($(imgdiv).html(), 'top-right', '5000', 'blueberry', 'fa-gift', true); return false;">With Html</button>
+                        <div id="imgdiv" style="display:none"><img width="24px" height="24px" src="~/assets/img/avatars/divyia.jpg"><span style="padding-left:10px;">John has sent you a gift</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="row-title before-pink"><i class="fa fa-bullseye pink"></i>Pop Overs</h5>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="well bordered-top bordered-purple popover-container">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <div class="popoverexample">
+                                <div class="popover top dark">
+                                    <div class="arrow"></div>
+                                    <h4 class="popover-title bordered-blue">Dark Popover top</h4>
+                                    <div class="popover-content">
+                                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <div class="popoverexample">
+                                <div class="popover right">
+                                    <div class="arrow"></div>
+                                    <h4 class="popover-title bordered-blueberry">Popover right</h4>
+                                    <div class="popover-content">
+                                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <div class="popoverexample">
+                                <div class="popover bottom">
+                                    <div class="arrow"></div>
+                                    <h4 class="popover-title bordered-palegreen">Popover bottom</h4>
+
+                                    <div class="popover-content">
+                                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <div class="popoverexample">
+                                <div class="popover left">
+                                    <div class="arrow"></div>
+                                    <h4 class="popover-title bordered-pink">Popover left</h4>
+                                    <div class="popover-content">
+                                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <div class="popoverexample">
+                                <div class="popover top">
+                                    <div class="arrow"></div>
+                                    <h4 class="popover-title bordered-warning">Popover</h4>
+                                    <div class="popover-content">
+                                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <div class="popoverexample">
+                                <div class="popover inverted top">
+                                    <div class="arrow"></div>
+                                    <h4 class="popover-title bordered-blue">Inverted Popover</h4>
+                                    <div class="popover-content">
+                                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="wide" />
+                    <h5>Popover On Buttons</h5>
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="buttons-preview text-align-center">
+                            @Html.Bootstrap().Button().Text("Popover on Click").Popover(new Popover("Simple Popover", "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.").Placement("top"))
+                            @Html.Bootstrap().Button().Text("PopOver With Html Content").Popover(new Popover("PopOver With Html Content", "<ul id='popup-tab' class='nav nav-tabs bordered'><li class='active'><a href='#pop-1' data-toggle='tab'>Tab1 </a></li><li><a href='#pop-2' data-toggle='tab'>Tab 2</a></li></ul><div id='popup-tab-content' class='tab-content padding-10'><div class='tab-pane fade in active' id='pop-1'><p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. </p></div><div class='tab-pane fade' id='pop-2'><p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. </p></div></div>").Placement("top"))
+                           @*TODO: Will be Implemented Soon*@ 
+                            <a href="javascript:void(0);" class="btn btn-default" data-container="body" data-titleclass="bordered-purple" data-class="dark" data-toggle="popover-hover" data-placement="left" data-title="Hover" data-content="Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.." data-original-title="" title="">
+                                Popover on Hover
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageScripts{
+    <script src="~/assets/js/toastr/toastr.js"></script>
+}

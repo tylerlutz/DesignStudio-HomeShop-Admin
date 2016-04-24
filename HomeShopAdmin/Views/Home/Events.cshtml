@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BeyondThemes.BeyondAdmin.Models.Event>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tickets_Sold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Max_Tickets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Notes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tickets_Sold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Max_Tickets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Event_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Event_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Event_ID })
+        </td>
+    </tr>
+}
+
+</table>

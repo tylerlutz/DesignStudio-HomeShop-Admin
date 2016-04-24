@@ -1,0 +1,221 @@
+﻿@{
+    ViewBag.Title = "Tree View";
+    ViewBag.Description = "tree view";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-sm-6 col-xs-6">
+        <div class="widget flat radius-bordered">
+            <div class="widget-header bg-lightred">
+                <span class="widget-caption">Default TreeView With Folders</span>
+
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div id="MyTree" class="tree">
+                    <div class="tree-folder" style="display: none;">
+                        <div class="tree-folder-header">
+                            <i class="fa fa-folder"></i>
+                            <div class="tree-folder-name"></div>
+                        </div>
+                        <div class="tree-folder-content">
+                        </div>
+                        <div class="tree-loader" style="display: none;"></div>
+                    </div>
+                    <div class="tree-item" style="display: none;">
+                        <i class="tree-dot"></i>
+                        <div class="tree-item-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-xs-6">
+        <div class="widget flat radius-bordered">
+            <div class="widget-header bg-blue">
+                <span class="widget-caption">Default TreeView With Plus/Minus</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div id="MyTree2" class="tree tree-plus-minus">
+                    <div class="tree-folder" style="display: none;">
+                        <div class="tree-folder-header">
+                            <i class="fa fa-folder"></i>
+                            <div class="tree-folder-name"></div>
+                        </div>
+                        <div class="tree-folder-content">
+                        </div>
+                        <div class="tree-loader" style="display: none;"></div>
+                    </div>
+                    <div class="tree-item" style="display: none;">
+                        <i class="tree-dot"></i>
+                        <div class="tree-item-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="horizontal-space"></div>
+<div class="row">
+    <div class="col-lg-6 col-sm-6 col-xs-6">
+        <div class="widget flat radius-bordered">
+            <div class="widget-header bg-palegreen">
+                <span class="widget-caption">Lined TreeView With Folders</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="MyTree3" class="tree tree-solid-line">
+                    <div class="tree-folder" style="display: none;">
+                        <div class="tree-folder-header">
+                            <i class="fa fa-folder"></i>
+                            <div class="tree-folder-name"></div>
+                        </div>
+                        <div class="tree-folder-content">
+                        </div>
+                        <div class="tree-loader" style="display: none;"></div>
+                    </div>
+                    <div class="tree-item" style="display: none;">
+                        <i class="tree-dot"></i>
+                        <div class="tree-item-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-xs-6">
+        <div class="widget flat radius-bordered">
+            <div class="widget-header bg-yellow">
+                <span class="widget-caption">Lined TreeView With Plus/Minus</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="MyTree4" class="tree tree-plus-minus tree-solid-line tree-unselectable">
+                    <div class="tree-folder" style="display: none;">
+                        <div class="tree-folder-header">
+                            <i class="fa fa-folder"></i>
+                            <div class="tree-folder-name"></div>
+                        </div>
+                        <div class="tree-folder-content">
+                        </div>
+                        <div class="tree-loader" style="display: none;"></div>
+                    </div>
+                    <div class="tree-item" style="display: none;">
+                        <i class="tree-dot"></i>
+                        <div class="tree-item-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="horizontal-space"></div>
+<div class="row">
+    <div class="col-lg-6 col-sm-6 col-xs-6">
+        <div class="widget flat radius-bordered">
+            <div class="widget-header bg-sky">
+                <span class="widget-caption">No Line TreeView With Folders</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="MyTree6" class="tree tree-no-line tree-unselectable">
+                    <div class="tree-folder" style="display: none;">
+                        <div class="tree-folder-header">
+                            <i class="fa fa-folder"></i>
+                            <div class="tree-folder-name"></div>
+                        </div>
+                        <div class="tree-folder-content">
+                        </div>
+                        <div class="tree-loader" style="display: none;"></div>
+                    </div>
+                    <div class="tree-item" style="display: none;">
+                        <i class="tree-dot"></i>
+                        <div class="tree-item-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-sm-6 col-xs-6">
+        <div class="widget flat radius-bordered">
+            <div class="widget-header bg-purple">
+                <span class="widget-caption">No Line TreeView With Plus/Minus</span>
+                <div class="widget-buttons">
+                    <a href="#" data-toggle="collapse">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" data-toggle="dispose">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div id="MyTree5" class="tree tree-plus-minus tree-no-line tree-unselectable">
+                    <div class="tree-folder" style="display: none;">
+                        <div class="tree-folder-header">
+                            <i class="fa fa-folder"></i>
+                            <div class="tree-folder-name"></div>
+                        </div>
+                        <div class="tree-folder-content">
+                        </div>
+                        <div class="tree-loader" style="display: none;"></div>
+                    </div>
+                    <div class="tree-item" style="display: none;">
+                        <i class="tree-dot"></i>
+                        <div class="tree-item-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageScripts{
+    <script src="~/assets/js/fuelux/treeview/tree-custom.min.js"></script>
+    <script src="~/assets/js/fuelux/treeview/treeview-init.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            UITree.init();
+        });
+    </script>
+}
