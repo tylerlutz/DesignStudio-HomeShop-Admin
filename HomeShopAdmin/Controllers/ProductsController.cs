@@ -65,12 +65,7 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             int pageNumber = (page ?? 1);
 
             return View(products.ToPagedList(pageNumber, pageSize));
-        }
-
-        private ActionResult View(object p)
-        {
-            throw new NotImplementedException();
-        }
+        }        
 
         // GET : product details
         public ActionResult Details(int? id)
