@@ -1,7 +1,29 @@
-﻿
+﻿@model IEnumerable<BeyondThemes.BeyondAdmin.Models.ShippingType>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Shipping";
+    ViewBag.Description = "Shipping List";
+    Layout = "~/Views/Shared/_Default.cshtml";
 }
 
-<h2>Index</h2>
+<table class="table">
 
+    <tr>
+        <th>Type</th>
+        <th>Cost</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@Html.DisplayFor(m => item.ShippingName)</th>
+            <th>@Html.DisplayFor(m=> item.ShippingCost)</th>
+            <th>@Html.ActionLink("Edit","Edit",new { id=item.ShippingID}) | @Html.ActionLink("Decomission", "Delete", new { id = item.ShippingID })</th>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+@Html.ActionLink("Create New", "Create", "Shipping", null, new { @class = "btn btn-primary" })

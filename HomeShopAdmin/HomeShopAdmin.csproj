@@ -439,6 +439,7 @@
     <Content Include="Views\Products\View.cshtml" />
     <Content Include="Views\Shipping\Index.cshtml" />
     <None Include="Properties\PublishProfiles\homeshopadmin-dev - Web Deploy.pubxml" />
+    <Content Include="Views\Shipping\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
