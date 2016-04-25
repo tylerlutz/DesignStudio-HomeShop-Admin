@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using BeyondThemes.BeyondAdmin.Models;
 using PagedList;
@@ -109,7 +107,7 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             catch (RetryLimitExceededException)
             {
                 // log the error
-                ModelState.AddModelError("", "Unable to save changes at this time. If the error persists, see your system's administrator, and beg forgiveness.");
+                ModelState.AddModelError("", "Unable to save changes at this time. If the error persists see your system's administrator, and beg forgiveness.");
             }
             return View(product);
         }
@@ -150,10 +148,58 @@ namespace BeyondThemes.BeyondAdmin.Controllers
                 }
                 catch (RetryLimitExceededException)
                 {
-                    ModelState.AddModelError("", "Unable to save changes at this time. If the error persists, see your system's administrator, and beg forgiveness.");
+                    ModelState.AddModelError("", "Unable to save changes at this time. If the error persists see your system's administrator, and beg forgiveness.");
                 }
             }
             return View(productUpdate);
+        }
+
+        // GET : product delete
+        public ActionResult Delete(int? id, bool? saveChangesError = false)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            if (saveChangesError.GetValueOrDefault())
+            {
+                ViewBag.ErrorMessage = "Delete failed. Try again. If it happens again contact your systems admin.";
+            }
+
+            Product product = db.Products.Find(id);
+
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
+        }
+
+        // POST : product delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete (int id)
+        {
+            try
+            {
+                Product product = db.Products.Find(id);
+                db.Products.Remove(product);
+                db.SaveChanges();
+            }
+            catch
+            {
+                return RedirectToAction("Delete", new { id = id, saveChangesError = true });
+            }
+            return RedirectToAction("Index");
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 } 
