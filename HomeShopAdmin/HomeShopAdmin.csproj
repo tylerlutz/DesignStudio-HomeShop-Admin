@@ -424,13 +424,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Home\FormInputMask.cshtml" />
-    <EntityDeploy Include="Models\HomeStore.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HomeStore.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\HomeStore.edmx.diagram">
-      <DependentUpon>HomeStore.edmx</DependentUpon>
-    </Content>
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Courses.cshtml" />
     <Content Include="Views\Home\Donations.cshtml" />
@@ -438,6 +431,13 @@
     <Content Include="Views\Orders\Index.cshtml" />
     <Content Include="Views\Products\View.cshtml" />
     <Content Include="Views\Shipping\Index.cshtml" />
+    <EntityDeploy Include="Models\HomeStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HomeStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\HomeStore.edmx.diagram">
+      <DependentUpon>HomeStore.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\homeshopadmin-dev - Web Deploy.pubxml" />
     <Content Include="Views\Shipping\Create.cshtml" />
     <Content Include="Views\Shipping\Delete.cshtml" />
