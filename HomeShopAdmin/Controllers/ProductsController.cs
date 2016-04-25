@@ -92,6 +92,7 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             return View();
         }
 
+        // POST : product/create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create ([Bind(Include = "ProductName, ProductDesc, Category, Quantity, Price")]Product product)
@@ -108,9 +109,51 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             catch (RetryLimitExceededException)
             {
                 // log the error
-                ModelState.AddModelError("", "Unable to save changes at this time. If the error persists, see your system's administrator, and beg forgiveness.")
+                ModelState.AddModelError("", "Unable to save changes at this time. If the error persists, see your system's administrator, and beg forgiveness.");
             }
             return View(product);
+        }
+
+        // GET : product Edit
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Product product = db.Products.Find(id);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
+        }
+
+        // POST : product edit
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPost(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var productUpdate = db.Products.Find(id);
+            if (TryUpdateModel(productUpdate, "", new string [] { "ProductName, ProductDesc, Category, Quantity, Price" }))
+            {
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (RetryLimitExceededException)
+                {
+                    ModelState.AddModelError("", "Unable to save changes at this time. If the error persists, see your system's administrator, and beg forgiveness.");
+                }
+            }
+            return View(productUpdate);
         }
     }
 } 
