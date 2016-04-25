@@ -1,6 +1,9 @@
 ﻿@model PagedList.IPagedList<BeyondThemes.BeyondAdmin.Models.Product>
-@using PagedList
 @using PagedList.Mvc
+@using PagedList
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 @{
     ViewBag.Title = "Products";
 }
@@ -69,5 +72,5 @@
 <br />
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
-@Html.PageListedPager(Model, page => Url.Action("Index",
+@Html.PagedListPager(Model, page => Url.Action("Index",
     new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
