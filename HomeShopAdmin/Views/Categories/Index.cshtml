@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BeyondThemes.BeyondAdmin.Models.Category>
+@{
+    ViewBag.Title = "Categories";
+    ViewBag.Description = "Product Categories";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@Html.DisplayFor(m => item.CategoryName)</th>
+            <th>@Html.DisplayFor(m=> item.CategoryDesc)</th>
+            <th>@Html.ActionLink("Edit","Edit",new { id=item.CategoryID}) | @Html.ActionLink("Decomission", "Delete", new { id = item.CategoryID })</th>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+@Html.ActionLink("Create New", "Create", "Categories", null, new { @class = "btn btn-primary" })

@@ -1,0 +1,41 @@
+﻿@model BeyondThemes.BeyondAdmin.Models.Category
+
+@{
+    ViewBag.Title = "Create New Product Category";
+    ViewBag.Description = "Categories List";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<h2>Create New Product Category</h2>
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Product Category Name</label>
+            <div class="col-md-5">
+                @Html.EditorFor(m => m.CategoryName, new { htmlAttributes = new {@class = "form-control" }})
+                @Html.ValidationMessageFor(m=>m.CategoryName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Category Description</label>
+            <div class="col-md-5">
+                @Html.EditorFor(m => m.CategoryDesc, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.CategoryDesc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

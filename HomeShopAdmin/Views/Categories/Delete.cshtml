@@ -1,0 +1,20 @@
+﻿@model BeyondThemes.BeyondAdmin.Models.Category
+
+@{
+    ViewBag.Title = "Delete Product Category";
+    ViewBag.Description = "Product Categories";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+
+<h3>Are you sure you want to delete @Model.CategoryName?</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions">
+        <input type="submit" value="Delete" class="btn btn-danger"  /> | 
+        @Html.ActionLink("No","Index","Category", null, new { @class = "btn btn-primary" })
+    </div>
+}
+

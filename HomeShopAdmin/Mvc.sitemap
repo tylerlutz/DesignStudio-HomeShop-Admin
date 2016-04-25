@@ -6,6 +6,7 @@
   <mvcSiteMapNode title="Dashboard" controller="Home" action="Index" imageUrl="glyphicon glyphicon-home" description="dashboard">
   
     <mvcSiteMapNode title="Products" controller="Products" action="Index" />
+    <mvcSiteMapNode title="Categories" controller="Categories" action="Index" imageUrl="glyphicon glyphicon-th" description="product categories"/>
     <mvcSiteMapNode title="Orders" controller="Orders" action="Index"/>
     <mvcSiteMapNode title="Shipping" controller="Shipping" action="Index" imageUrl="glyphicon glyphicon-envelope" description="shipping types"/>
   
