@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using BeyondThemes.BeyondAdmin.Models;
 using PagedList;
 using System.Net;
+using System.Data.Entity.Infrastructure;
 
 namespace BeyondThemes.BeyondAdmin.Controllers
 {
@@ -52,12 +53,18 @@ namespace BeyondThemes.BeyondAdmin.Controllers
                 case "quant_desc":
                     products = products.OrderByDescending(p => p.Quantity);
                     break;
+                case "price":
+                    products = products.OrderBy(p => p.Price);
+                    break;
+                case "price_desc":
+                    products = products.OrderByDescending(p => p.Price);
+                    break;
                 default:
                     products = products.OrderBy(p => p.ProductName);
                     break;
             }
 
-            int pageSize = 50;
+            int pageSize = 25;
             int pageNumber = (page ?? 1);
 
             return View(products.ToPagedList(pageNumber, pageSize));
@@ -78,5 +85,32 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             }
             return View(product);
         }
+
+        // GET : product/create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create ([Bind(Include = "ProductName, ProductDesc, Category, Quantity, Price")]Product product)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Products.Add(product);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (RetryLimitExceededException)
+            {
+                // log the error
+                ModelState.AddModelError("", "Unable to save changes at this time. If the error persists, see your system's administrator, and beg forgiveness.")
+            }
+            return View(product);
+        }
     }
-}
+} 
