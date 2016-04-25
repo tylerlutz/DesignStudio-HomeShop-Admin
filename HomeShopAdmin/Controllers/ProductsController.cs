@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BeyondThemes.BeyondAdmin.Models;
 using PagedList;
+using System.Net;
 
 namespace BeyondThemes.BeyondAdmin.Controllers
 {
@@ -60,6 +61,22 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             int pageNumber = (page ?? 1);
 
             return View(products.ToPagedList(pageNumber, pageSize));
+        }
+        // GET : product details
+        public ActionResult Details (int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Product product = db.Products.Find(id);
+
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
         }
     }
 }
