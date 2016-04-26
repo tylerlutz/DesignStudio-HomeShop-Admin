@@ -25,10 +25,10 @@
         <input type="submit" value="Search" />
     </p>
 }
-<table class="table">
+<table class="table" style="width:100%">
     <tr>
         <th>
-            @Html.ActionLink("ProductName", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+            @Html.ActionLink("Product Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
             @Html.ActionLink("Category", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
@@ -49,22 +49,22 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
+            <td width="20%">
                 @Html.DisplayFor(modelItem => item.ProductName)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
+            <td width="10%">
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
             </td>
-            <td>
+            <td width="5%">
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
-            <td>
+            <td width="5%">
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
+            <td width="45%">
                 @Html.DisplayFor(modelItem => item.ProductDesc)
             </td>
-            <td>
+            <td width="15%">
                 @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
