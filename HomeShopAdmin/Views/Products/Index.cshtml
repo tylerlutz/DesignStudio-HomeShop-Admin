@@ -1,7 +1,80 @@
-﻿
+﻿@model PagedList.IPagedList<BeyondThemes.BeyondAdmin.Models.Product>
+@using PagedList.Mvc
+@using PagedList
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Default.cshtml";
 }
 
-<h2>View</h2>
+@{
+    ViewBag.Title = "Products";
+}
 
+<h2>Products Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Product", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table" style="width:100%">
+    <tr>
+        <th>
+            @Html.ActionLink("Product Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Category", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Quantity", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Description", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>Actions</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td width="20%">
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td width="10%">
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td width="5%">
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td width="5%">
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td width="45%">
+                @Html.DisplayFor(modelItem => item.ProductDesc)
+            </td>
+            <td width="15%">
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

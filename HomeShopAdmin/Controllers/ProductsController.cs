@@ -5,12 +5,13 @@ using BeyondThemes.BeyondAdmin.Models;
 using PagedList;
 using System.Net;
 using System.Data.Entity.Infrastructure;
+using System.Data.Entity;
 
 namespace BeyondThemes.BeyondAdmin.Controllers
 {
     public class ProductsController : Controller
     {
-        HomeStoreEntities db = new HomeStoreEntities(); 
+        HomeStoreEntities db = new HomeStoreEntities();
 
         public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
@@ -67,11 +68,6 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             return View(products.ToPagedList(pageNumber, pageSize));
         }
 
-        private ActionResult View(object p)
-        {
-            throw new NotImplementedException();
-        }
-
         // GET : product details
         public ActionResult Details(int? id)
         {
@@ -92,13 +88,14 @@ namespace BeyondThemes.BeyondAdmin.Controllers
         // GET : product/create
         public ActionResult Create()
         {
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
             return View();
         }
 
         // POST : product/create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductName, ProductDesc, Category, Quantity, Price")]Product product)
+        public ActionResult Create([Bind(Include = "ProductName, ProductDesc, CategoryID, Quantity, Price, ImageLocation")]Product product)
         {
             try
             {
@@ -130,33 +127,24 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
             return View(product);
         }
 
         // POST : product edit
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult EditPost(int? id)
+        public ActionResult EditPost([Bind(Include = "ProductID, ProductName, ProductDesc, CategoryID, Quantity, Price, ImageLocation")]Product product)
         {
-            if (id == null)
+            if (ModelState.IsValid)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                db.Entry(product).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            var productUpdate = db.Products.Find(id);
-            if (TryUpdateModel(productUpdate, "", new string[] { "ProductName, ProductDesc, Category, Quantity, Price" }))
-            {
-                try
-                {
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                catch (RetryLimitExceededException)
-                {
-                    ModelState.AddModelError("", "Unable to save changes at this time. If the error persists see your system's administrator, and beg forgiveness.");
-                }
-            }
-            return View(productUpdate);
+            return View(product);
         }
 
         // GET : product delete
