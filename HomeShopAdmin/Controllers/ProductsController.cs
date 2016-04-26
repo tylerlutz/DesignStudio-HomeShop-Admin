@@ -5,6 +5,7 @@ using BeyondThemes.BeyondAdmin.Models;
 using PagedList;
 using System.Net;
 using System.Data.Entity.Infrastructure;
+using System.Data.Entity;
 
 namespace BeyondThemes.BeyondAdmin.Controllers
 {
@@ -126,33 +127,24 @@ namespace BeyondThemes.BeyondAdmin.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
             return View(product);
         }
 
         // POST : product edit
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult EditPost(int? id)
+        public ActionResult EditPost([Bind(Include = "ProductID, ProductName, ProductDesc, CategoryID, Quantity, Price, ImageLocation")]Product product)
         {
-            if (id == null)
+            if (ModelState.IsValid)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                db.Entry(product).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            var productUpdate = db.Products.Find(id);
-            if (TryUpdateModel(productUpdate, "", new string[] { "ProductName, ProductDesc, Category, Quantity, Price" }))
-            {
-                try
-                {
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                catch (RetryLimitExceededException)
-                {
-                    ModelState.AddModelError("", "Unable to save changes at this time. If the error persists see your system's administrator, and beg forgiveness.");
-                }
-            }
-            return View(productUpdate);
+            return View(product);
         }
 
         // GET : product delete
