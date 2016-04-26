@@ -87,13 +87,14 @@ namespace BeyondThemes.BeyondAdmin.Controllers
         // GET : product/create
         public ActionResult Create()
         {
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
             return View();
         }
 
         // POST : product/create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductName, ProductDesc, Category, Quantity, Price")]Product product)
+        public ActionResult Create([Bind(Include = "ProductName, ProductDesc, CategoryID, Quantity, Price, ImageLocation")]Product product)
         {
             try
             {
