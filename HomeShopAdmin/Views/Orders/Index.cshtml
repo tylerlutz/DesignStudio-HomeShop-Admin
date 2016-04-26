@@ -1,7 +1,26 @@
-﻿
+﻿@model IEnumerable<BeyondThemes.BeyondAdmin.Models.CustomerOrder>
+@using BeyondThemes.BeyondAdmin.Models
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Orders";
+    ViewBag.Description = "Customer Orders";
+    Layout = "~/Views/Shared/_Default.cshtml";
 }
 
-<h2>Index</h2>
+<table class="table">
+
+    <tr>
+        <th>OrderID</th>
+        <th>Total</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@Html.DisplayFor(m => item.OrderID)</th>
+            <th>@Html.DisplayFor(m => item.TotalCost)</th>
+        </tr>
+    }
+
+</table>
+
 
