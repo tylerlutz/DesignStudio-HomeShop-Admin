@@ -3,11 +3,10 @@
             xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
 
-  <mvcSiteMapNode title="Dashboard" controller="Home" action="Index" imageUrl="glyphicon glyphicon-home" description="dashboard">
-  
-    <mvcSiteMapNode title="Products" controller="Products" action="Index" />
+    <mvcSiteMapNode title="Dashboard" controller="Home" action="Index" imageUrl="glyphicon glyphicon-home" description="dashboard">
+    <mvcSiteMapNode title="Products" controller="Products" action="Index" imageUrl="glyphicon glyphicon-gift" description="products" />
     <mvcSiteMapNode title="Categories" controller="Categories" action="Index" imageUrl="glyphicon glyphicon-th" description="product categories"/>
-    <mvcSiteMapNode title="Orders" controller="Orders" action="Index"/>
+    <mvcSiteMapNode title="Orders" controller="Orders" action="Index" imageUrl="glyphicon glyphicon-credit-card" description="customer orders"/>
     <mvcSiteMapNode title="Shipping" controller="Shipping" action="Index" imageUrl="glyphicon glyphicon-envelope" description="shipping types"/>
   
   </mvcSiteMapNode> 
