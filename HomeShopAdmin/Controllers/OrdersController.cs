@@ -28,10 +28,7 @@ namespace BeyondThemes.BeyondAdmin.Controllers
 
             var items = db.ShoppingCartItems.Where(i => i.OrderID == order.OrderID);
 
-            foreach(ShoppingCartItem item in items)
-            {
-                detail.Items.Add(item);
-            }
+            detail.Items = items.ToList();
 
             return View(detail);
         }
