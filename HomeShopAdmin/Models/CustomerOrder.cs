@@ -11,7 +11,7 @@ namespace BeyondThemes.BeyondAdmin.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class CustomerOrder
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,6 +22,8 @@ namespace BeyondThemes.BeyondAdmin.Models
     
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         public Nullable<decimal> TotalCost { get; set; }
         public Nullable<int> ShippingID { get; set; }
         public string TransactionID { get; set; }

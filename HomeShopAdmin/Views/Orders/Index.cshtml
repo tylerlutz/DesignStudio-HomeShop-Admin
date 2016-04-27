@@ -18,6 +18,7 @@
         <tr>
             <th>@Html.DisplayFor(m => item.OrderID)</th>
             <th>@Html.DisplayFor(m => item.TotalCost)</th>
+            <th>@Html.ActionLink("Order Details","Details", new { id = item.OrderID })</th>
         </tr>
     }
 

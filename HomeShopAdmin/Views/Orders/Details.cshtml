@@ -22,14 +22,14 @@
             <td>Quatity</td>
             <td>Cost</td>
         </tr>
-        <tr>
-            @foreach(var item in Model.Items)
-            {
+        @foreach (var item in Model.Items)
+        {
+            <tr>
                 <td>@item.Product.ProductName</td>
                 <td>@item.Quantity</td>
                 <td>@item.Price</td>
-            }
-        </tr>
+            </tr>
+        }
     </table>
 </div>
 
