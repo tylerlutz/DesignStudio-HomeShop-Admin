@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeyondThemes.BeyondAdmin.Models;
+using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,27 @@ namespace BeyondThemes.BeyondAdmin.Controllers
 {
     public class OrdersController : Controller
     {
-        // GET: Orders
+        HomeStoreEntities db = new HomeStoreEntities();
+
         public ActionResult Index()
         {
-            return View();
+            var orders = db.CustomerOrders;
+
+            return View(orders.OrderByDescending(o => o.OrderID));
+        }
+
+        public ActionResult Details(int? id)
+        {
+            OrderDetails detail = new OrderDetails();
+
+            CustomerOrder order = db.CustomerOrders.Find(id);
+            detail.Order = order;
+
+            var items = db.ShoppingCartItems.Where(i => i.OrderID == order.OrderID);
+
+            detail.Items = items.ToList();
+
+            return View(detail);
         }
     }
 }
