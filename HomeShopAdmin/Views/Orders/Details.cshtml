@@ -27,7 +27,7 @@
             <tr>
                 <td>@item.Product.ProductName</td>
                 <td>@item.Quantity</td>
-                <td>@item.Price</td>
+                <td>@string.Format("{0:C2}", (decimal)(item.Price))</td>
             </tr>
         }
     </table>
