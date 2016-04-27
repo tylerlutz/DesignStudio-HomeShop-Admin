@@ -42,7 +42,7 @@
   <ItemGroup>
     <Reference Include="BeyondThemes.Bootstrap, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Library\4.5.1\BeyondThemes.Bootstrap.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\BeyondThemes.Bootstrap.dll</HintPath>
     </Reference>
     <Reference Include="BundleTransformer.Core">
       <HintPath>..\packages\BundleTransformer.Core.1.9.69\lib\net40\BundleTransformer.Core.dll</HintPath>
@@ -168,6 +168,10 @@
     <Reference Include="System.Net.Http">
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\T4MVCExtensions.3.17.4\lib\net40\T4MVCExtensions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebActivatorEx">
       <HintPath>..\packages\WebActivatorEx.2.0.1\lib\net40\WebActivatorEx.dll</HintPath>
