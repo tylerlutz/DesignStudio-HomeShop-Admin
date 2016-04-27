@@ -23,6 +23,8 @@ namespace BeyondThemes.BeyondAdmin.Models
     
         public int ProductID { get; set; }
         public string ProductName { get; set; }
+
+        [DataType(DataType.MultilineText)]
         public string ProductDesc { get; set; }
         public Nullable<int> CategoryID { get; set; }
         public Nullable<int> Quantity { get; set; }
